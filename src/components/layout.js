@@ -10,13 +10,17 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "./layout.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, coverImage }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
+          menuLinks {
+            link
+            name
+          }
           title
         }
       }
@@ -25,7 +29,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
+      {coverImage && (
+          <img src={coverImage} alt="" style={{ maxWidth: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block', maxHeight: '600px' }} />
+        )}
       <div
         style={{
           margin: `0 auto`,
