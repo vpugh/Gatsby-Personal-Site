@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="UI/UX Developer" />
     <section className="portfolio-preview">
-      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr', gridGap: '30px' }}>
+      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
         {data.allProjectsJson.edges.map(({ node: project }) => (
           <Link to={project.slug} key={project.title}>
             <Image fluid={project.image.childImageSharp.fluid} />
