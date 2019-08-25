@@ -2,6 +2,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import './header.scss';
 
 const Header = ({ menuLinks, siteTitle }) => (
   <header
@@ -51,7 +52,7 @@ const Header = ({ menuLinks, siteTitle }) => (
                 padding: `1rem`,
               }}
             >
-              <Link style={{ color: `#424242` }} to={link.link}>
+              <Link className="link" to={link.link}>
                 {link.name}
               </Link>
             </li>

@@ -17,8 +17,9 @@
 }
 
 .blog {
-  // background: #e1e1e1;
-  border-top: 2px solid #e1e1e1;
+  &.underline {
+    border-top: 2px solid #e1e1e1;
+  }
   padding: 80px 0 40px 0;
   
   a {
@@ -32,7 +33,13 @@
 
 	.btn {
 		margin: 0 auto;
-	}
+  }
+  
+  .title {
+    margin-bottom: 60px;
+    font-size: 3.625rem;
+    line-height: 1.2;
+  }
 
 	&--posts {
 		display: grid;
