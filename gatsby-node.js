@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require('path');
+const _ = require("lodash")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -46,6 +47,23 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
+    postsRemark: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 2000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            tags
+          }
+        }
+      }
+    }
+    tagsGroup: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
+      }
+    }
   }`)
   .then(res => {
     if (res.errors) {
@@ -69,11 +87,16 @@ exports.createPages = ({ actions, graphql }) => {
       })
     });
 
-    // res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    //   createPage({
-    //     path: node.frontmatter.tags,
-    //     component: tagsTemplate,
-    //   })
-    // })
+    const tags = res.data.tagsGroup.group
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag.fieldValue)}`,
+        component: tagsTemplate,
+        context: {
+          tag: tag.fieldValue,
+        }
+      })
+    })
   })
 }

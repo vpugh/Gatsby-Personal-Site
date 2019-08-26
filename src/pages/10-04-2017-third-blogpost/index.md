@@ -2,7 +2,7 @@
 path: '/how-to-fall-down-and-get-back-up'
 title: 'How to Fall Down and Get Back Up'
 excerpt: 'Pushing forward and striving to succeed even when you feel like a failure and are giving up hope.'
-tags: design, inspiration, life lesson
+tags: ['design', 'inspiration', 'life lesson']
 cover_image: https://miro.medium.com/max/4800/1*x19r4jDmAjmpxyJqziLt4A.jpeg
 draft: false
 date: 2017-08-30

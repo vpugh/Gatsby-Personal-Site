@@ -2,7 +2,7 @@
 path: '/giving-a-talk-that-i-didnt-know-wanted-to-give'
 title: 'Giving a talk that I didn’t know I wanted to give'
 excerpt: 'Facing a new experience, not being overwhelmed, and finding a new passion'
-tags: public speaking, life lessons, design, passion
+tags: ['public speaking', 'life lessons', 'design', 'passion']
 cover_image: https://miro.medium.com/max/2000/1*m4MKxjoyY-RXYRWBGEjkOw.jpeg
 draft: false
 date: 2017-08-12

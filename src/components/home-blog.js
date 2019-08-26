@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby'
+import kebabCase from "lodash/kebabCase"
 import './home-blog.scss';
 
 const HomeBlog = ({ slug, image, title, date, tags, timeToRead }) => {
@@ -20,7 +21,7 @@ const HomeBlog = ({ slug, image, title, date, tags, timeToRead }) => {
         </div>
       </Link>
       <div className="blog--tags">
-        {tags.map(tag => <Link to={`/tags/${tag}`} className="blog--tag" key={tag}>{tag}</Link>)}
+        {tags.map(tag => <Link to={`/tags/${kebabCase(tag)}`} className="blog--tag" key={tag}>{tag}</Link>)}
       </div>
     </div>
   )

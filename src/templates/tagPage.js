@@ -1,33 +1,43 @@
-import React from 'react'
-import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-
-export default function TagPage({
-  location,
-  pageContext: {tag},
-  data: {
-    allMarkdownRemark,
-    site: {siteMetadata},
-  },
-}) {
+import React from "react"
+import { Link, graphql } from "gatsby"
+const Tags = ({ pageContext, data }) => {
+  const { tag } = pageContext
+  const { edges, totalCount } = data.allMarkdownRemark
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? "" : "s"
+  } tagged with "${tag}"`
   return (
-    <Layout location={location} title={siteMetadata.title}>
-      <div>
-        <SEO title={`Posts tagged "${tag}"`} keywords={[tag]} />
-        <h1>Posts Tagged "{tag}"</h1>
-        <PostsList posts={allMarkdownRemark.edges} />
-      </div>
-    </Layout>
+    <div>
+      <h1>{tagHeader}</h1>
+      <ul>
+        {edges.map(({ node }) => {
+          const { title, path: slug } = node.frontmatter
+          return (
+            <li key={slug}>
+              <Link to={slug}>{title}</Link>
+            </li>
+          )
+        })}
+      </ul>
+      <Link to="/tags">All tags</Link>
+    </div>
   )
 }
+export default Tags
 
 export const pageQuery = graphql`
-  {
-    allMarkdownRemark(sort: {fields: frontmatter___tags}) {
+  query($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
       edges {
         node {
           frontmatter {
-            tags
+            title
+            path
           }
         }
       }

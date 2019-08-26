@@ -4,11 +4,6 @@ import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import HomeBlog from "../components/home-blog";
 
-const showTags = tags => {
-  const tagArray = tags.split(',');
-  return tagArray;
-}
-
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="UI/UX Developer" />
@@ -25,7 +20,7 @@ const IndexPage = ({ data }) => (
           const timeToRead = post.timeToRead;
 
           return (
-            <HomeBlog slug={slug} image={image} title={title} date={date} tags={showTags(tags)} timeToRead={timeToRead} key={id} />
+            <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} />
           )
         })}
       </div>
