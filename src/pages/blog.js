@@ -32,7 +32,7 @@ export default IndexPage
 
 export const indexQuery = graphql`
 {
-  allMarkdownRemark(filter: {frontmatter: {draft: {eq: false}}}, sort: {fields: frontmatter___date, order: DESC}) {
+  allMarkdownRemark(filter: {frontmatter: {draft: {eq: false}, date: {nin: "null"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         id

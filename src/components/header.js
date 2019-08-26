@@ -52,9 +52,16 @@ const Header = ({ menuLinks, siteTitle }) => (
                 padding: `1rem`,
               }}
             >
-              <Link className="link" to={link.link}>
-                {link.name}
-              </Link>
+              {link.name === 'Contact' && (
+                <a className="link" href="mailto:hello@toripugh.com" rel="noopener noreferrer">
+                  {link.name}
+                </a>
+              )} 
+              {link.name !== 'Contact' && (
+                <Link className="link" to={link.link}>
+                  {link.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

@@ -15,6 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
   const postTemplate = path.resolve('src/templates/post.js');
   const tagsTemplate = path.resolve('src/templates/tagPage.js');
   const portfolioTemplate = path.resolve('src/templates/portfolio.js');
+  const workTemplate = path.resolve('src/templates/work.js');
 
   return graphql(`{
     allMarkdownRemark {
@@ -31,19 +32,22 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-    allProjectsJson {
+    workPages: allMarkdownRemark(sort: {fields: frontmatter___role}, filter: {frontmatter: {client: {regex: ""}}}) {
       edges {
         node {
-          title
-          slug
-          description
-          image {
-            childImageSharp {
-              fluid {
-                srcSet
-              }
-            }
+          frontmatter {
+            title
+            path
+            client
+            github
+            draft
+            description
+            deliverable
+            role
+            project_description
+            url
           }
+          html
         }
       }
     }
@@ -77,16 +81,6 @@ exports.createPages = ({ actions, graphql }) => {
       })
     });
 
-    res.data.allProjectsJson.edges.forEach(({ node }) => {
-      createPage({
-        path: node.slug,
-        component: portfolioTemplate,
-        context: {
-          slug: node.slug,
-        }
-      })
-    });
-
     const tags = res.data.tagsGroup.group
 
     tags.forEach(tag => {
@@ -96,6 +90,13 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           tag: tag.fieldValue,
         }
+      })
+    })
+
+    res.data.workPages.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: workTemplate,
       })
     })
   })

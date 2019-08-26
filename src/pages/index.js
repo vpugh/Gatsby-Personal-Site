@@ -11,11 +11,14 @@ const IndexPage = ({ data }) => (
     <SEO title="UI/UX Developer" />
     <section className="portfolio-preview">
       <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
-        {data.allProjectsJson.edges.map(({ node: project }) => (
-          <Link to={project.slug} key={project.title}>
-            <Image fluid={project.image.childImageSharp.fluid} />
-            <h3 className="pp-title">{project.title}</h3>
-            <p className="pp-subtitle">{project.description}</p>
+        {data.workThumb.edges.map(({ node: project }) => (
+          <Link to={project.frontmatter.path} key={project.frontmatter.title}>
+            <div
+              className="blog--cover"
+              style={{ backgroundImage: `url(${project.frontmatter.image})`}}
+            />
+            <h3 className="pp-title">{project.frontmatter.title}</h3>
+            <p className="pp-subtitle">{project.frontmatter.description}</p>
           </Link>
         ))}
       </div>
@@ -41,6 +44,7 @@ const IndexPage = ({ data }) => (
           )
         })}
       </div>
+      <Link className="btn block" to="/blog">Older Blog Post</Link>
     </section>
   </Layout>
 )
@@ -49,7 +53,7 @@ export default IndexPage
 
 export const indexQuery = graphql`
 {
-  allMarkdownRemark(limit: 6, filter: {frontmatter: {draft: {eq: false}}}, sort: {fields: frontmatter___date, order: DESC}) {
+  allMarkdownRemark(limit: 6, filter: {frontmatter: {draft: {eq: false}, date: {nin: "null"}}}, sort: {fields: frontmatter___date, order: DESC}) {
     edges {
       node {
         id
@@ -65,19 +69,23 @@ export const indexQuery = graphql`
       }
     }
   }
-  allProjectsJson {
+  workThumb: allMarkdownRemark(sort: {fields: frontmatter___role}, filter: {frontmatter: {client: {regex: ""}}}) {
     edges {
       node {
-        title
-        slug
-        description
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        frontmatter {
+          title
+          path
+          client
+          github
+          draft
+          description
+          deliverable
+          role
+          project_description
+          url
+          image
         }
+        html
       }
     }
   }

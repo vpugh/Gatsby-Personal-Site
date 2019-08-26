@@ -622,3 +622,28 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+///
+
+.btn {
+  padding: 10px 35px;
+  color: #262626;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.125em;
+  transition: ease-in-out 250ms;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #ddd;
+
+  @media (min-width: 1024px) {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 16px 35px;
+  }
+
+  .block {
+    display: inline-block;
+    padding: 9px 34px 7px;
+  }
+}
