@@ -13,10 +13,7 @@ const IndexPage = ({ data }) => (
       <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
         {data.workThumb.edges.map(({ node: project }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
-            <div
-              className="blog--cover"
-              style={{ backgroundImage: `url(${project.frontmatter.image})`}}
-            />
+            <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
             <h3 className="pp-title">{project.frontmatter.title}</h3>
             <p className="pp-subtitle">{project.frontmatter.description}</p>
           </Link>
@@ -83,7 +80,13 @@ export const indexQuery = graphql`
           role
           project_description
           url
-          image
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         html
       }

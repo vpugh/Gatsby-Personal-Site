@@ -43,8 +43,8 @@ const Layout = ({ children, coverImage }) => {
         }}
       >
         <main>{children}</main>
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }
