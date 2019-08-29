@@ -1,5 +1,5 @@
 ---
-path: '/pomodoro-timer-app'
+path: '/work/pomodoro-timer-app'
 title: "Pomodoro Timer App"
 excerpt: ''
 tags: []

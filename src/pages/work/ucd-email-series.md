@@ -1,5 +1,5 @@
 ---
-path: '/ucd-email-series'
+path: '/work/ucd-email-series'
 title: "UCD Email Series"
 excerpt: ''
 tags: []
