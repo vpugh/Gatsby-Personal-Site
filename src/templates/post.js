@@ -1,12 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import Image from 'gatsby-image';
 import './postTemplate.scss';
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <Layout coverImage={post.frontmatter.cover_image}>
+    <Layout coverImage={post.frontmatter.cover_image.childImageSharp.fluid}>
+      {post.frontmatter.cover_image && (
+        <Image fluid={post.frontmatter.cover_image.childImageSharp.fluid} />
+      )}
       <h1>{post.frontmatter.title}</h1>
       <p>Published Date: {post.frontmatter.date}</p>
       <div className="text-body" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -23,7 +27,13 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
-        cover_image
+        cover_image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         date(formatString: "MMMM DD YYYY")
       }
     }

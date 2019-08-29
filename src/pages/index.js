@@ -30,6 +30,7 @@ const IndexPage = ({ data }) => (
         {data.allMarkdownRemark.edges.map(({ node: post}) => {
           const title = post.frontmatter.title;
           const tags = post.frontmatter.tags;
+          const fluidImage = post.frontmatter.cover_image.childImageSharp.fluid;
           const image = post.frontmatter.cover_image;
           const date = post.frontmatter.date;
           const slug = post.frontmatter.path;
@@ -37,7 +38,7 @@ const IndexPage = ({ data }) => (
           const timeToRead = post.timeToRead;
 
           return (
-            <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} />
+            <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} fluidImage={fluidImage} />
           )
         })}
       </div>
@@ -59,7 +60,13 @@ export const indexQuery = graphql`
           excerpt
           title
           tags
-          cover_image
+          cover_image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           date(formatString: "MMMM Do, YYYY")
         }
         timeToRead

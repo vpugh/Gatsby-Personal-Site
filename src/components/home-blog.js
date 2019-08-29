@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'gatsby'
+import Image from 'gatsby-image';
 import kebabCase from "lodash/kebabCase"
 import './home-blog.scss';
 
-const HomeBlog = ({ slug, image, title, date, tags, timeToRead }) => {
+const HomeBlog = ({ slug, image, title, date, tags, timeToRead, fluidImage }) => {
   return (
     <div className="blog--posts">
       <Link to={slug}>
-        <div
-          className="blog--cover"
-          style={{ backgroundImage: `url(${image})`}}
-        />
+        {image !== null && (
+          <Image fluid={fluidImage} />
+        )}
         <div className="blog--text">
           <h2 className="blog--title">
             {title}

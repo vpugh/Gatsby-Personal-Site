@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.scss"
 import Footer from "./footer";
+import Image from 'gatsby-image';
 
 const Layout = ({ children, coverImage }) => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,8 @@ const Layout = ({ children, coverImage }) => {
     <>
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
       {coverImage && (
-          <img src={coverImage} alt="" style={{ maxWidth: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block', maxHeight: '600px' }} />
+          // <img src={coverImage} alt="" style={{ maxWidth: '80%', marginLeft: 'auto', marginRight: 'auto', display: 'block', maxHeight: '600px' }} />
+          <Image fluid={coverImage} />
         )}
       <div
         style={{
