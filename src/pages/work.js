@@ -1,11 +1,13 @@
 import React from 'react';
 import Layout from "../components/layout"
 import Image from 'gatsby-image';
+import SEO from "../components/seo"
 import { graphql, Link } from 'gatsby';
 
 const Work = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Work" />
       <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
       {data.work.edges.map(({ node: work }) => (
         <Link to={work.frontmatter.path} key={work.frontmatter.title}>

@@ -6,7 +6,7 @@ import HomeBlog from "../components/home-blog";
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="UI/UX Developer" />
+    <SEO title="Blog" />
     <section className="blog">
       <h2 className="title" style={{ padding: '10px 0' }}>Writings and Mental Musings</h2>
       <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px'}}>

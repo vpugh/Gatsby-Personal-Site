@@ -5,10 +5,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import HomeBlog from "../components/home-blog";
+import Hero from "../components/hero";
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="UI/UX Developer" />
+    <Hero />
     <section className="portfolio-preview">
       <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
         {data.workThumb.edges.map(({ node: project }) => (

@@ -17,6 +17,8 @@ sub_title: "A development challenge that turned into it's own app"
 project_description: "To keep my skills sharp and for some fun I decided to participate in the development challenge that Scotch.io was running every week. At the completion of the challenge I wanted to make my own Pomodoro Timer using the Vue-CLI and host it online so anyone could use it."
 ---
 
+![](https://toripugh.com/images/gallery/pomodoro/pomodoro-original.jpg)
+
 When I started making this timer for the challenge, I thought it would be no problem. How hard could a timer be to make? I ended up learning a lot and in the end building my own version from scratch using the Vue-CLI and then hosting it on Github Pages.
 
 Since it was such an involved process I wrote a blog article about my experience; my steps in creating; and the lessons I learned.
@@ -25,15 +27,15 @@ Since it was such an involved process I wrote a blog article about my experience
 
 I thought that creating a countdown system would be easy. It was anything but easy, at least for me who is weak in math. I had to go on a tangent of breaking down all the time into milliseconds and then using that as a base for keeping track of the overall time. I learned how all this worked by making a digital clock.
 
-// embedded codepen
+<!-- // embedded codepen -->
+[Digital Clock Codepen](https://codepen.io/Vpugh/pen/MVpaxo)
 
 After creating the clock I worked what I had learned into the countdown timer, which was pretty simple. I fulfilled the simple requests for the challenge - the Play button starts the timer; the Pause button stops the timer; and the Reset button returns the timer to its original state of 25 minutes.
 
 I'd done the challenge and had succeeded, where to go from here. I decided to dive in and make a fully functional pomodoro timer, one that counts from 25 mins to a 5 min break and repeats this a few times. This version needed to tell you what stage you were in, alert you when the stage was over and visually look a bit slicker.
 
-// image
-
-image subtitle - My challenge complete timer, the messages changed depending what state it was in.
+![](https://toripugh.com/images/gallery/pomodoro/pomodoro-scotchio.jpg)
+> My challenge complete timer, the messages changed depending what state it was in.
 
 ## MY POMODORO TIMER
 
@@ -45,6 +47,6 @@ I've also added sound effects to mark the change of the rounds. This was an inte
 
 For this version I did not make the app in CodePen, I used the Vue CLI and exported it out and uploaded it to Github Pages. This was it's on mini adventure but luckily wasn't nearly as tough as I thought it would be.
 
-// image - break (tomatillo)
-// subtitle - The rest period tomatillo theme.
+![](https://toripugh.com/images/gallery/pomodoro/pomodoro-tomatillo.jpg)
+> The rest period tomatillo theme.
 

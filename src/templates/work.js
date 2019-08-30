@@ -1,12 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
+import SEO from "../components/seo"
 import './work.scss';
 
 const WorkTemplate = ({ data }) => {
   const project = data.markdownRemark;
   return (
     <Layout>
+      <SEO title={`Work - ${project.frontmatter.title}`} />
       <h2 className="title">{project.frontmatter.title}</h2>
       <h3 className="subtitle">{project.frontmatter.sub_title}</h3>
       <div className="intro-block">
