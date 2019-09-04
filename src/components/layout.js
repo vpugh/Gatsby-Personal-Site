@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.scss"
+// import "./layout.scss"
+import "./styles.scss";
 import Footer from "./footer";
 
 const Layout = ({ children }) => {
@@ -28,6 +29,11 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const generateThemeColor = () => {
+    const themeColors = ['orange', 'green', 'blue'];
+    return themeColors[Math.floor(Math.random() * themeColors.length)];
+  }
+
   return (
     <>
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
@@ -39,7 +45,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main className={generateThemeColor()}>{children}</main>
       </div>
       <Footer />
     </>

@@ -43,13 +43,15 @@ const Header = ({ menuLinks, siteTitle }) => (
         </Link>
       </h1>
       <nav>
-        <ul style={{ display: "flex", flex: 1 }}>
+        <ul style={{ display: "flex", flex: 1, marginBottom: '0' }}>
           {menuLinks.map(link => (
             <li
               key={link.name}
               style={{
                 listStyleType: `none`,
                 padding: `1rem`,
+                marginBottom: '0',
+                letterSpacing: '1.25px'
               }}
             >
               {link.name === 'Contact' && (

@@ -109,6 +109,18 @@
   margin-left: 10px
 }
 
+.orange .hero .intro-line:after {
+  background: #ffb64d
+}
+
+.green .hero .intro-line:after {
+  background: #aed87c;
+}
+
+.blue .hero .intro-line:after {
+  background: #4dd8ff;
+}
+
 @media screen and (min-width: 768px) {
   .hero .intro-line:after {
       text-align:center
@@ -142,15 +154,9 @@
 
 @media screen and (min-width: 1024px) {
   .hero--title {
-      font-size:3.625rem;
-      width: 90%;
-      line-height: 1.2
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .hero--title {
-      font-size:4rem
+      font-size:3.6rem;
+      line-height: 1.2;
+      font-weight: 700;
   }
 }
 
