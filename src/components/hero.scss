@@ -127,14 +127,28 @@
   }
 }
 
-.orange .hero .intro-line:after {
-  background: #ffb64d
-}
-
 .hero--title {
   line-height: 1.5;
   font-size: 1.6rem;
-  font-weight: 800
+  font-weight: 800;
+
+  a {
+    text-decoration: underline;
+    transition: 300ms ease-in-out;
+    &:hover {
+      .orange & {
+        color: #ffb64d
+      }
+      
+      .green & {
+        color: #aed87c;
+      }
+      
+      .blue & {
+        color: #4dd8ff;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {

@@ -38,6 +38,9 @@ const Header = ({ menuLinks, siteTitle }) => (
             color: '#424242',
             textDecoration: `none`,
           }}
+          activeStyle={{
+            fontWeight: '600'
+          }}
         >
           {siteTitle}
         </Link>
@@ -60,7 +63,10 @@ const Header = ({ menuLinks, siteTitle }) => (
                 </a>
               )} 
               {link.name !== 'Contact' && (
-                <Link className="link" to={link.link}>
+                <Link className="link" to={link.link} activeStyle={{
+                  fontWeight: '600',
+                  borderBottom: '2px solid #444'
+                }}>
                   {link.name}
                 </Link>
               )}

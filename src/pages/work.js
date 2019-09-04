@@ -8,14 +8,17 @@ const Work = ({ data }) => {
   return (
     <Layout>
       <SEO title="Work" />
-      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
-      {data.work.edges.map(({ node: work }) => (
-        <Link to={work.frontmatter.path} key={work.frontmatter.title}>
-          <Image fluid={work.frontmatter.image.childImageSharp.fluid} />
-          <h2>{work.frontmatter.title}</h2>
-        </Link>
-      ))}
-      </div>
+      <section className="work" style={{     padding: '80px 0 40px 0' }}>
+        <h2 className="title" style={{ padding: '10px 0', marginBottom: '60px', fontSize: '3.125rem', lineHeight: '1.2' }}>Work</h2>
+        <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
+        {data.work.edges.map(({ node: work }) => (
+          <Link to={work.frontmatter.path} key={work.frontmatter.title}>
+            <Image fluid={work.frontmatter.image.childImageSharp.fluid} />
+            <h2>{work.frontmatter.title}</h2>
+          </Link>
+        ))}
+        </div>
+        </section>
     </Layout>
   );
 };
