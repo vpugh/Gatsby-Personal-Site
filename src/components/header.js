@@ -38,9 +38,6 @@ const Header = ({ menuLinks, siteTitle }) => (
             color: '#424242',
             textDecoration: `none`,
           }}
-          activeStyle={{
-            fontWeight: '600'
-          }}
         >
           {siteTitle}
         </Link>

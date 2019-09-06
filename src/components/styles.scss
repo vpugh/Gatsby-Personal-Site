@@ -3,6 +3,12 @@ a {
   text-decoration: none;
 }
 
+.inline-link {
+  color: inherit;
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+}
+
 .btn {
   padding: 10px 35px;
   color: #262626;
