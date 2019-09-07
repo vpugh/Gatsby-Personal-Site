@@ -14,7 +14,7 @@ const Work = ({ data }) => {
         {data.work.edges.map(({ node: work }) => (
           <Link to={work.frontmatter.path} key={work.frontmatter.title}>
             <Image fluid={work.frontmatter.image.childImageSharp.fluid} />
-            <h2>{work.frontmatter.title}</h2>
+            <h2 style={{ marginTop: '1.6rem' }}>{work.frontmatter.title}</h2>
           </Link>
         ))}
         </div>

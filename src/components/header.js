@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import './header.scss';
+import SocialMedia from "./social-media";
 
 const Header = ({ menuLinks, siteTitle }) => (
   <header
@@ -23,8 +24,8 @@ const Header = ({ menuLinks, siteTitle }) => (
     />
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 1080,
+        margin: `40px auto 0 auto`,
+        maxWidth: '82%',
         padding: `1.45rem 1.0875rem`,
         display: 'flex',
         justifyItems: 'space-between',
@@ -49,7 +50,7 @@ const Header = ({ menuLinks, siteTitle }) => (
               key={link.name}
               style={{
                 listStyleType: `none`,
-                padding: `1rem`,
+                padding: `0 .75rem`,
                 marginBottom: '0',
                 letterSpacing: '1.25px'
               }}
@@ -69,6 +70,7 @@ const Header = ({ menuLinks, siteTitle }) => (
               )}
             </li>
           ))}
+          <SocialMedia iconWidth={32} />
         </ul>
       </nav>
     </div>

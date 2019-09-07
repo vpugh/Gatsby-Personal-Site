@@ -5,12 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import "./layout.scss"
 import "./styles.scss";
 import Footer from "./footer";
 
@@ -33,6 +32,10 @@ const Layout = ({ children }) => {
     const themeColors = ['orange', 'green', 'blue'];
     return themeColors[Math.floor(Math.random() * themeColors.length)];
   }
+
+  useEffect(() => {
+    generateThemeColor();
+  }, []);
 
   return (
     <>
