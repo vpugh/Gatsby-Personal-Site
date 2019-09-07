@@ -27,8 +27,8 @@ Since it was such an involved process I wrote a blog article about my experience
 
 I thought that creating a countdown system would be easy. It was anything but easy, at least for me who is weak in math. I had to go on a tangent of breaking down all the time into milliseconds and then using that as a base for keeping track of the overall time. I learned how all this worked by making a digital clock.
 
-<!-- // embedded codepen -->
 [Digital Clock Codepen](https://codepen.io/Vpugh/pen/MVpaxo)
+https://codepen.io/Vpugh/pen/MVpaxo
 
 After creating the clock I worked what I had learned into the countdown timer, which was pretty simple. I fulfilled the simple requests for the challenge - the Play button starts the timer; the Pause button stops the timer; and the Reset button returns the timer to its original state of 25 minutes.
 
