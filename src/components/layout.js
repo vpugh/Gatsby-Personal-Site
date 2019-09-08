@@ -13,7 +13,7 @@ import Header from "./header"
 import "./styles.scss";
 import Footer from "./footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, padTop }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main className={generateThemeColor()}>{children}</main>
+        <main style={{ paddingTop: padTop ? '80px' : '' }} className={generateThemeColor()}>{children}</main>
       </div>
       <Footer />
     </>

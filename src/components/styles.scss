@@ -14,7 +14,7 @@ a {
   color: #262626;
   display: inline-block;
   margin-right: 20px;
-  font-size: 1.125em;
+  font-size: 1em;
   transition: ease-in-out 250ms;
   cursor: pointer;
   text-decoration: none;
@@ -44,41 +44,7 @@ a {
   }
 }
 
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-  white-space: pre-wrap;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
-
-pre {
-  background: #ddd;
-  padding: 20px;
+:not(pre) > code[class*="language-"] {
+  font-size: 1rem !important;
+  padding: .25em .5em !important;
 }

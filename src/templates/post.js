@@ -8,13 +8,13 @@ import './postTemplate.scss';
 const Template = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <Layout coverImage={post.frontmatter.cover_image.childImageSharp.fluid}>
+    <Layout coverImage={post.frontmatter.cover_image.childImageSharp.fluid} padTop={true}>
       <SEO title={`Blog - ${post.frontmatter.title}`} />
       {post.frontmatter.cover_image && (
         <Image fluid={post.frontmatter.cover_image.childImageSharp.fluid} style={{ marginBottom: '2rem'}} />
       )}
-      <h1>{post.frontmatter.title}</h1>
-      <p>Published Date: {post.frontmatter.date}</p>
+      <h1 style={{ marginBottom: '.25rem' }}>{post.frontmatter.title}</h1>
+      <p><em>Published Date:</em> {post.frontmatter.date}</p>
       <div className="text-body" dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   );

@@ -6,9 +6,9 @@ import { graphql, Link } from 'gatsby';
 
 const Work = ({ data }) => {
   return (
-    <Layout>
+    <Layout padTop={true}>
       <SEO title="Work" />
-      <section className="work" style={{     padding: '80px 0 40px 0' }}>
+      <section className="work" style={{ paddingBottom: '40px' }}>
         <h2 className="title" style={{ padding: '10px 0', marginBottom: '60px', fontSize: '3.125rem', lineHeight: '1.2' }}>Work</h2>
         <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
         {data.work.edges.map(({ node: work }) => (
