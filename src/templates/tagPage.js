@@ -1,5 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
+import './tags.scss';
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -7,20 +10,20 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
   return (
-    <div>
+    <Layout padTop={true}>
       <h1>{tagHeader}</h1>
-      <ul>
+      <ul className="taglist">
         {edges.map(({ node }) => {
           const { title, path: slug } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link className="inline-link" to={slug}>{title}</Link>
             </li>
           )
         })}
       </ul>
-      <Link to="/tags">All tags</Link>
-    </div>
+      <Link className="btn block" to="/tags">All tags</Link>
+    </Layout>
   )
 }
 export default Tags

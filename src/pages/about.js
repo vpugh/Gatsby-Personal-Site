@@ -22,7 +22,7 @@ const AboutPage = () => (
         </a>
       </div>
       <h2 className="quote">I listen to understand a problem, do research to identify and/or confirm it, and then create solutions for them.</h2>
-      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'end' }}>
         <div className="about--textholder">
           <p>I’m a UI/UX developer who is passionate about creating products that puts the users first. I want to make products that run better and are easier for the user. I've had varied involvement as a visual designer, front-end developer, or email developer. I think there should always be an aspect of user-experience understanding in design, development, or email creation.</p>
 

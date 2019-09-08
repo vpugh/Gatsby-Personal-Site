@@ -5,22 +5,21 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 // Components
-import { Helmet } from "react-helmet"
+import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
+import '../templates/tags.scss';
+import Layout from "../components/layout";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
+  <Layout padTop={true}>
+    <SEO title="All Blog Tags" />
     <div>
-      <h1>Tags</h1>
-      <ul>
+      <h1>All Tags</h1>
+      <ul className="alltags">
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
@@ -30,7 +29,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 )
 
 TagsPage.propTypes = {
