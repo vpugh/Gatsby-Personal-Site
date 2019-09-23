@@ -12,16 +12,16 @@ const WorkTemplate = ({ data }) => {
       <h2 className="title">{project.frontmatter.title}</h2>
       <h3 className="subtitle">{project.frontmatter.sub_title}</h3>
       <div className="intro-block">
-        <p>
+        <p style={{ marginBottom: '.5rem' }}>
           <strong>Client:</strong> {project.frontmatter.client}
         </p>
-        <p>
+        <p style={{ marginBottom: '.5rem' }}>
           <strong>Role:</strong> {project.frontmatter.role}
         </p>
-        <p>
+        <p style={{ marginBottom: '.5rem' }}>
           <strong>Deliverable:</strong> {project.frontmatter.deliverable}
         </p>
-        <p>
+        <p style={{ marginBottom: '1.5rem' }}>
           <strong>Project Description:</strong> {project.frontmatter.project_description}
         </p>
         {project.frontmatter.url && (
