@@ -3,7 +3,7 @@ import './social-media.scss';
 
 const SocialMedia = ({ iconWidth }) => {
   return (
-    <div style={{ display: "flex", flex: 1, marginBottom: '0', borderLeft: '2px solid #ddd', paddingLeft: '20px', marginLeft: '10px' }}>
+    <ul style={{ display: "flex", flex: 1, marginBottom: '0', borderLeft: '2px solid #ddd', paddingLeft: '20px', marginLeft: '10px' }}>
       <li className="soc">
         <a href="https://twitter.com/teekatwo" rel="noopener noreferrer" target="_blank" title="Twitter">
           <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid slice" width={iconWidth}>
@@ -41,7 +41,7 @@ const SocialMedia = ({ iconWidth }) => {
           </svg>
         </a>
       </li>
-    </div>
+    </ul>
   );
 };
 

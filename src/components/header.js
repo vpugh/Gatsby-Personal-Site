@@ -43,7 +43,7 @@ const Header = ({ menuLinks, siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <nav>
+      <nav style={{ display: 'flex' }}>
         <ul style={{ display: "flex", flex: 1, marginBottom: '0' }}>
           {menuLinks.map(link => (
             <li
@@ -70,8 +70,8 @@ const Header = ({ menuLinks, siteTitle }) => (
               )}
             </li>
           ))}
-          <SocialMedia iconWidth={32} />
         </ul>
+        <SocialMedia iconWidth={32} />
       </nav>
     </div>
   </header>

@@ -8,15 +8,13 @@ draft: false
 date: 2019-09-08
 ---
 
-<a class="inline-link" title="" href="" target="_blank" rel="noopener noreferrer"></a>
-
-I'd been curious about Gatsby for awhile. I've heard about the **JAM**STACK (**J**avaScript, **A**PIs, and prerendered **M**arkup) and about static site generators for awhile. Having plenty of Gatsby courses saved on <a class="inline-link" title="egghead.io" href="https://egghead.io/" target="_blank" rel="noopener noreferrer">egghead.io</a> and I decided one day that a side project I was building might be a good candidate to use it. So, there was no better time to start then now.
+I'd been curious about Gatsby for awhile. I've heard about the **JAM**STACK (**J**avaScript, **A**PIs, and prerendered **M**arkup) and about static site generators for awhile. Having plenty of Gatsby courses saved on <a class="inline-link" title="egghead.io" href="https://egghead.io/" target="_blank" aria-label="Egghead.io - Screencast workshops for professional web developers." rel="noopener noreferrer">egghead.io</a> and I decided one day that a side project I was building might be a good candidate to use it. So, there was no better time to start then now.
 
 ### Video Tutorials are great starting points
 
-I'm personally a fan of video tutorials, I'm a visual learner and I like watching people build things. I watched <a class="inline-link" title="" href="" target="_blank" rel="noopener noreferrer"></a>[Build a Blog With React and Markdown](https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby) and was just amazed at how straight forward and simple this all seemed. Having used Gatsby about a year ago, but with no experience in React. I was fairly confused how anything worked.
+I'm personally a fan of video tutorials, I'm a visual learner and I like watching people build things. I watched <a class="inline-link" aria-label="Build a Blog with React and Markdown from egghead.io" title="" href="" target="_blank" rel="noopener noreferrer"></a>[Build a Blog With React and Markdown](https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby) and was just amazed at how straight forward and simple this all seemed. Having used Gatsby about a year ago, but with no experience in React. I was fairly confused how anything worked.
 
-Now I’m React trained and I think it’s time to give this another shot. After watching the Egghead series and a <a class="inline-link" title="" href="" target="_blank" rel="noopener noreferrer"></a>[Youtube series](https://www.youtube.com/playlist?list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg) to better understand how to use Gatsby. Also reading articles about how people should try and maintain their own blogs the decision was pretty clear. Make a blog! This would be the perfect way to get a controlled feel for Gatsby and make something that would be beneficial to me.
+Now I’m React trained and I think it’s time to give this another shot. After watching the Egghead series and a <a class="inline-link" aria-label="YouTube GatsbyJS Tutorials Series"  title="" href="" target="_blank" rel="noopener noreferrer"></a>[Youtube series](https://www.youtube.com/playlist?list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg) to better understand how to use Gatsby. Also reading articles about how people should try and maintain their own blogs the decision was pretty clear. Make a blog! This would be the perfect way to get a controlled feel for Gatsby and make something that would be beneficial to me.
 
 ### Using Gatsby CLI to develop a site
 
@@ -40,7 +38,7 @@ In Gatsby, there are two important files: `gatsby-config.js` and `gatsby-node.js
 ### Gatsby-config.js
 This is where your site configuration, *surprise surprise*, for your site will be placed.
 
-The options that I used on this page were siteMetadata and plugins. There are a few more that I haven't made use of yet, <a class="inline-link" title="configuration options" href="https://www.gatsbyjs.org/docs/gatsby-config/#configuration-options" target="_blank" rel="noopener noreferrer">configuration options</a>
+The options that I used on this page were siteMetadata and plugins. There are a few more that I haven't made use of yet, <a class="inline-link" aria-label="GatsbyJS Docs for Configuration Options"  title="configuration options" href="https://www.gatsbyjs.org/docs/gatsby-config/#configuration-options" target="_blank" rel="noopener noreferrer">configuration options</a>
 
 #### siteMetadata
 
@@ -131,11 +129,11 @@ CreatePages works by taking a GraphQL schema and using that to reference and que
 
 Resources:
 
-<a class="inline-link" title="Gatsby Node APIs" href="https://www.gatsbyjs.org/docs/node-apis/" target="_blank" rel="noopener noreferrer">Gatsby Node APIs</a>
+<a class="inline-link" aria-label="GatsbyJS Node APIs"  title="Gatsby Node APIs" href="https://www.gatsbyjs.org/docs/node-apis/" target="_blank" rel="noopener noreferrer">Gatsby Node APIs</a>
 
-<a class="inline-link" title="Gatsby Tutorial Part Seven - Programmatically create pages from data" href="https://www.gatsbyjs.org/tutorial/part-seven/" target="_blank" rel="noopener noreferrer">Gatsby Tutorial Part Seven - Programmatically create pages from data</a>
+<a class="inline-link" aria-label="GatsbyJS Tutorial Part Seven - Programmatically create pages from data"  title="Gatsby Tutorial Part Seven - Programmatically create pages from data" href="https://www.gatsbyjs.org/tutorial/part-seven/" target="_blank" rel="noopener noreferrer">Gatsby Tutorial Part Seven - Programmatically create pages from data</a>
 
-<a class="inline-link" title="GatsbyJS Tutorials #5 - Building A Blog With Markdown Part 2" href="https://www.youtube.com/watch?v=VxVKMJThh04&list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg&index=5" target="_blank" rel="noopener noreferrer">GatsbyJS Tutorials #5 - Building A Blog With Markdown Part 2</a> - Should watch Part 1 to understand the foundations for this part.
+<a class="inline-link" aria-label="GatsbyJS Tutorials #5 - Building A Blog With Markdown Part 2"  title="GatsbyJS Tutorials #5 - Building A Blog With Markdown Part 2" href="https://www.youtube.com/watch?v=VxVKMJThh04&list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg&index=5" target="_blank" rel="noopener noreferrer">GatsbyJS Tutorials #5 - Building A Blog With Markdown Part 2</a> - Should watch Part 1 to understand the foundations for this part.
 
 ### The Page Folder
 
@@ -156,7 +154,7 @@ Example new page. Create a new file `src/pages/about.js` with the following code
 
 Something as simple as the code above would generate a new page in Gatsby. You could then go to `localhost:8000/about` and see your new page.
 
-<a class="inline-link" title="Creating Pages Automatically" href="https://www.gatsbyjs.org/docs/recipes/#creating-pages-automatically" target="_blank" rel="noopener noreferrer">Creating Pages Automatically</a>
+<a class="inline-link" aria-label="GatsbyJS Docs for Creating Pages Automatically"  title="Creating Pages Automatically" href="https://www.gatsbyjs.org/docs/recipes/#creating-pages-automatically" target="_blank" rel="noopener noreferrer">Creating Pages Automatically</a>
 
 ## Were do you go from here
 
