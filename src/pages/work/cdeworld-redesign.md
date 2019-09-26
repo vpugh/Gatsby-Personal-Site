@@ -17,7 +17,7 @@ sub_title: "Creating a redesign of a site — the design and research involved"
 project_description: "CDEWorld needed an improved digital foundation to facilitate the increase in mobile and tablet traffic. With this improvement they also wanted to identify user experience improvements, develop a site that better conveyed their company values, and have an audit of their development practices and assets."
 ---
 
-<img src="../../../static/images/gallery/cdeworld/Macbook-Article-1.png" alt="">
+<img src="../static/images/gallery/cdeworld/article-new.jpg" alt="test">
 
 ![](/static/Macbook-Article-1-39370fef37751cb6de6f1cd3a2be4a97.png)
 
