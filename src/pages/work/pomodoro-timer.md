@@ -17,7 +17,7 @@ sub_title: "A development challenge that turned into it's own app"
 project_description: "To keep my skills sharp and for some fun I decided to participate in the development challenge that Scotch.io was running every week. At the completion of the challenge I wanted to make my own Pomodoro Timer using the Vue-CLI and host it online so anyone could use it."
 ---
 
-![](https://toripugh.com/images/gallery/pomodoro/pomodoro-original.jpg)
+![](/static/pomodoro-original-54b86f281f54b50b123e414208c6f623.jpg)
 
 When I started making this timer for the challenge, I thought it would be no problem. How hard could a timer be to make? I ended up learning a lot and in the end building my own version from scratch using the Vue-CLI and then hosting it on Github Pages.
 
@@ -34,7 +34,7 @@ After creating the clock I worked what I had learned into the countdown timer, w
 
 I'd done the challenge and had succeeded, where to go from here. I decided to dive in and make a fully functional pomodoro timer, one that counts from 25 mins to a 5 min break and repeats this a few times. This version needed to tell you what stage you were in, alert you when the stage was over and visually look a bit slicker.
 
-![](https://toripugh.com/images/gallery/pomodoro/pomodoro-scotchio.jpg)
+![](/static/pomodoro-scotchio-d5b18d2df93b036f809d8ec6201d3267.jpg)
 > My challenge complete timer, the messages changed depending what state it was in.
 
 ## MY POMODORO TIMER
@@ -47,6 +47,6 @@ I've also added sound effects to mark the change of the rounds. This was an inte
 
 For this version I did not make the app in CodePen, I used the Vue CLI and exported it out and uploaded it to Github Pages. This was it's on mini adventure but luckily wasn't nearly as tough as I thought it would be.
 
-![](https://toripugh.com/images/gallery/pomodoro/pomodoro-tomatillo.jpg)
+![](/static/pomodoro-tomatillo-1cc903a5c704a52426d683f59577bc73.jpg)
 > The rest period tomatillo theme.
 

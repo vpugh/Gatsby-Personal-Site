@@ -17,7 +17,7 @@ sub_title: "The design and development of a email system capable of producing ma
 project_description: "Updates in Clinical Dentistry was in need of an email system that could maintain their multiple emails targeting multiple locations. This system need to make universal changes to all the emails, keep consistent branding, be easily reproducible for any location, and be quick to create and deploy."
 ---
 
-![Showcase of UCD emails](https://toripugh.com/images/gallery/ucd/UCD-emails-1@2x.jpg)
+![Showcase of UCD emails](/static/UCD-emails-1-b67a1174801279cd32f4762e275fc24e.jpg)
 
 ## THE APPROACH
 
@@ -27,8 +27,8 @@ I needed to develop/utilize an automated system to insert the relevant informati
 
 I subscribed to as many conference email lists as I could to see what other people were doing. I also found a great resource in [reallygoodemails.com](http://reallygoodemails.com/) and took note of some of the features of the emails such as subheaders, titles, buttons, and images. I started piecing together ideas on the general layouts, though keeping in mind I still needed to please my superiors.
 
-![Consistent look and feel across emails](https://toripugh.com/images/gallery/ucd/UCD-emails-2@2x.jpg)
-> Keeping a consistent look and feel across all emails. This was tough on some of the more targeted emails.
+![Consistent look and feel across emails](/static/UCD-emails-2-3ace125b5b53ad68a52954dfb8ec73aa.jpg)
+<h2 class="quote">Keeping a consistent look and feel across all emails. This was tough on some of the more targeted emails.</h2>
 
 ## TYPES OF EMAILS
 
@@ -46,8 +46,8 @@ The registrants are general emails sent to people who are already registered. Th
 
 Starting a few days after the event the attendees will get these emails, reminding them about the courses they can take online and directing them to a page to find out how to redeem them. They will keep getting these emails until they have redeemed a course. These emails are very important and as such are more text heavy.
 
-![Emails system code with JSON files and nunjucks](https://toripugh.com/images/gallery/ucd/UCD-code-1@2x.jpg)
-> JSON files and Nunjucks templates do all the heavy-lifting for the email system. The files can be very long and complex but they have made everything a million times easier.
+![Emails system code with JSON files and nunjucks](/static/UCD-code-1-27bef497b67b2f0fda5d99868d3a8091.jpg)
+<h2 class="quote">JSON files and Nunjucks templates do all the heavy-lifting for the email system. The files can be very long and complex but they have made everything a million times easier.</h2>
 
 ## DEVELOPMENT SETUP
 
