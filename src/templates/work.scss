@@ -17,4 +17,10 @@
   background-color: #fff;
   padding: 50px;
   line-height: 1.5;
+  p:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
