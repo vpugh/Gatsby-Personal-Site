@@ -17,7 +17,7 @@ sub_title: "Designing and developing a freelance website to convert new to digit
 project_description: "Wanting to start a freelance company and working under the royal we I wanted to create a professional site to attract businessess. This needed to be clear, concise, and a little showy."
 ---
 
-![](/static/laptop-site-791b44b12fe74478a08f98ee0b392c30.png)
+<img src="../../images/gallery/vpdesigns/laptop-site.png" alt="Site displayed in a Macbook">
 
 ## THE APPROACH
 
@@ -29,7 +29,7 @@ I would be tasked with all facets of this project, copywriting, design, and deve
 
 I poured over Dribbble and went through as many portfolio sites as I could, each being exceptionally different. Not finding a style that I thought I wanted my site to go in, I took different pieces of design techniques and incorporated them into my ideas.
 
-![](/static/dribbble-portfolio-b05552618c505d177f44b589aaeae591.png)
+<img src="../../images/gallery/vpdesigns/dribbble-portfolio.png" alt="Dribbble research">
 <div class="quote">I curated an extensive list of portfolio sites. Not necessarily to emulate but to gather ideas about font-size, layouts, and general appearance.</div>
 
 ### LAYOUT
@@ -50,7 +50,7 @@ I jumped into sketch and started to put together some layouts and start working 
 
 I went to the extreme at first and worked my way back to a more clean design. The waves at the bottom were more distracting than they actually added anything to the site. The wording was too much, you want people to hit the page and want to read more and not be hit by a wall of words, in most cases.
 
-![](/static/initial-design-a431cc15c3cddeab52989e6f8034f886.png)
+<img src="../../images/gallery/vpdesigns/initial-design.png" alt="Site initial layout">
 <div class="quote">I didn't feel these designs were strong enough. The text alignment felt off and the wording was quite right. Just had to keep subtracting.</div>
 
 ## DESIGN #2
@@ -59,7 +59,7 @@ I'd developed the prior designs into a prototype site, and was not satisfied wit
 
 After personally working through some other branded related decisions, I was also moving with my improved identity. Associating as a company I changed from using my name, Victoria Pugh, to VP—Designs. This also warranted a change in how some pages would be laid out and how I'd be referring to myself.
 
-![](/static/vpdesigns-v3-d644442d3fdafa1f4e82326404ebf15c.png)
+<img src="../../images/gallery/vpdesigns/vpdesigns-v3.png" alt="Site second attempt at layout">
 <div class="quote">More dynamic gradient, liked the heavier font choice, and less to read. On the right direction.</div>
 
 ## FURTHER ITERATION
@@ -68,7 +68,7 @@ Worked on cultivating a good brand tone and trying to keep stripping back until 
 
 Looking through a lot of Steve Schoger's tweets on <a href="https://twitter.com/steveschoger/status/895647278370660353">gradients</a> and <a href="https://twitter.com/i/moments/880688233641848832">more</a> and used that to create a much cleaner and more consistent colored site. My gradients now felt vibrant and balanced. I liked the usage of the icons in the hero and in the list below.
 
-![](/static/vpdesigns-v4-221fa4285eebb4d09d020183fd2ff225.png)
+<img src="../../images/gallery/vpdesigns/vpdesigns-v4.png" alt="Satisfied site layout">
 <div class="quote">Following online tips I made a more streamlined site. The tone feels much more natural. Everything looked more balanced.</div>
 
 ## FINAL VERSION
@@ -79,4 +79,4 @@ The build for this site is very simple, it's just your average HTML, CSS, and Ja
 
 The blog page was a late addition because I had not decided to write a consistent blog until late in the development phase. It was easy but it's a very manual process at the moment and making that easier would be great.
 
-![](/static/final-version-vpdesigns-655fdac082c22a5e672f967fed77f82e.png)
+<img src="../../images/gallery/vpdesigns/final-version-vpdesigns.png" alt="Final site version">

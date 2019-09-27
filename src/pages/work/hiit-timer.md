@@ -42,9 +42,9 @@ An idea I'm working out in my mind was a suggestion. It would allow for a higher
 
 Further down the line, I would like to include a system for themeing the page. I can start with some premade colors I come up with. In the more distant future I could let people mess around and make whatever they want.
 
-<img src="../../images/gallery/hiit/hiit-timer-initial.jpg" alt="test">
-<img src="../../images/gallery/hiit/hiit-setting-initial.jpg" alt="test">
-<img src="../../images/gallery/hiit/hiit-settings.jpg" alt="test">
+<img src="../../images/gallery/hiit/hiit-timer-initial.jpg" alt="Initial Timer Layout - No Exercises">
+<img src="../../images/gallery/hiit/hiit-setting-initial.jpg" alt="Timer Settings Page - Default Exercises">
+<img src="../../images/gallery/hiit/hiit-settings.jpg" alt="Timer Settings Page with Exercises">
 <div class="quote">
   Initial blank state, initial settings page, settings page filled out.
 </div>
