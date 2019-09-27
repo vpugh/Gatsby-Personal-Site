@@ -61,7 +61,14 @@ To create this system, I looked on Github for any repo's that had a Gulp email w
 
 While setting this system up there was a drastic style change. This development setup made making the universal changes to all emails incredibly easy. My superiors like to keep making changes throughout the campaign and this system has been a life-saver. One change for the footer and the header and I didn't have to worry about making the change to every iteration of the new and old emails.
 
-[MI - Email 1 (Original Style Pre-System)](http://aegispublications.com/news/cdeworld/2017/events/updates/01/MI-E1.html) [MI - Email 2 (New Style Pre-System)](http://aegispublications.com/news/cdeworld/2017/events/updates/02/MI-E2.html) [MI - Email 4](http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E4.html) [MI - Email 5](http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E5.html) [MI - Email 6](http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E6.html) [PA - Email 7](http://aegispublications.com/news/cdeworld/2017/events/updates/04/PA-E7.html)
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/01/MI-E1.html" target="_blank">MI - Email 1 (Original Style Pre-System)</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/02/MI-E2.html" target="_blank">MI - Email 2 (New Style Pre-System)</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E4.html" target="_blank">MI - Email 4</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E5.html" target="_blank">MI - Email 5</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/03/MI-E6.html" target="_blank">MI - Email 6</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/04/PA-E7.html" target="_blank">PA - Email 7</a>
 
 Examples of the email changes over the campaign
-[1st E3 Version - Pre-System](http://aegispublications.com/news/cdeworld/2017/events/updates/02/MI-E3.html) [2nd E3 Version - Post-System](http://aegispublications.com/news/cdeworld/2017/events/updates/03/MA-E3.html) [3rd E3 Version - Post-System](http://aegispublications.com/news/cdeworld/2017/events/updates/05/CA-E3.html)
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/02/MI-E3.html" target="_blank">1st E3 Version - Pre-System</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/03/MA-E3.html" target="_blank">2nd E3 Version - Post-System</a>
+<a class="inline-link" href="http://aegispublications.com/news/cdeworld/2017/events/updates/05/CA-E3.html" target="_blank">3rd E3 Version - Post-System</a>

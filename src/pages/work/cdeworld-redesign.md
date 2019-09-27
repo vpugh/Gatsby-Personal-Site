@@ -17,9 +17,7 @@ sub_title: "Creating a redesign of a site — the design and research involved"
 project_description: "CDEWorld needed an improved digital foundation to facilitate the increase in mobile and tablet traffic. With this improvement they also wanted to identify user experience improvements, develop a site that better conveyed their company values, and have an audit of their development practices and assets."
 ---
 
-<img src="../static/images/gallery/cdeworld/article-new.jpg" alt="test">
-
-![](/static/Macbook-Article-1-39370fef37751cb6de6f1cd3a2be4a97.png)
+<img src="../../images/gallery/cdeworld/Macbook-Article-1.png" alt="Redesigned layout in macbook">
 
 ## THE APPROACH
 
@@ -33,7 +31,8 @@ To answer some of these questions I used Ptengine and utilized their heat maps f
 
 **Biggest takeaways:** The site was getting more mobile traffic than expected. There were aspects of the site that were confusing to people, people were clicking on unclickable objects. Any page with a list was using an infinite scroll and having a sharp drop in people scrolling. The screen resolutions that were recorded on the site were larger than the design was originally created.
 
-![](/static/dribbble-portfolio-b05552618c505d177f44b589aaeae591.png)
+<img src="../../images/gallery/cdeworld/sitemap-2.jpg" alt="Sitemap/Flowchard">
+<img src="../../images/gallery/cdeworld/sitemap-3.jpg" alt="Sitemap/Sketched Layouts">
 <div class="quote">Sketches identifying general site structure, the type of pages that would be needed, and their connection to other pages. Also some rough sketches of the site pages.</div>
 
 ## SITE MAPPING
@@ -46,23 +45,24 @@ Going down through the navigation I traced the links to the pages that they touc
 
 Utilizing the takeaways from heat maps, information from the sitemap, and conversations with decision makers I started making numerous wireframes for the homepage and other pages. I took inspiration and ideas from content heavy websites similar in content to CDEWorld, much like a newspaper or news site. I needed a look capable of holding a lot of text similar to the sites of New York Times, Reuters, or Washington Post.
 
-![](/static/Homepage-v2-2f6628cdc537a341bebd8ac48c78058f.jpg)
+<img src="../../images/gallery/cdeworld/Homepage-v2.jpg" alt="test">
 <div class="quote">Examples of constant iteration — Various wireframes for the homepage trying to figure out what content works best were.</div>
 
 ## PROTOTYPES
 
 The various pages would have different layouts, depending on their content and one of the toughest was the homepage. After creating many different designs, I quickly went to prototyping the layouts to get a feel for how they would function. It helped to quickly work through many ideas, different points of emphasis, and generally working through the problem.
 
-<a href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign-3/Grid%20-%20Test3.html" target="_blank">Homepage - Ver1</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign/Grid%20-%20Test.html" target="_blank">Homepage - Ver2</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/Homepage.html" target="_blank">Homepage - Ver3</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/hp2/" target="_blank">Homepage - Ver4</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/hp3/" target="_blank">Homepage - Ver5</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/hp4/" target="_blank">Homepage - Ver6</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version3.html" target="_blank">Homepage - Ver7</a>
-<a href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign-2/Grid%20-%20Test2.html" target="_blank">Ebook Library - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign-3/Grid%20-%20Test3.html" target="_blank">Homepage - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign/Grid%20-%20Test.html" target="_blank">Homepage - Ver2</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/Homepage.html" target="_blank">Homepage - Ver3</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/hp2/" target="_blank">Homepage - Ver4</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/hp3/" target="_blank">Homepage - Ver5</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/hp4/" target="_blank">Homepage - Ver6</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version3.html" target="_blank">Homepage - Ver7</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v1/Grid-%20Redesign-2/Grid%20-%20Test2.html" target="_blank">Ebook Library - Ver1</a>
 
-![](/static/vpdesigns-v3-d644442d3fdafa1f4e82326404ebf15c.png)
+<img src="../../images/gallery/cdeworld/article-new.jpg" alt="test">
+<img src="../../images/gallery/cdeworld/article-org.jpg" alt="test">
 <div class="quote">Creating a cleaner and easier reading experience on the articles.</div>
 
 ## THE IMPORTANT PAGES?
@@ -73,13 +73,13 @@ I wanted to make the experience on these pages more user-friendly. The main obje
 
 The purpose of these pages is to read or watch the information and then pass a test for certification. With this in mind I made a prototype that emphasized the main content, whether that is an article; ebook; event; or webinar, and includes a sidebar with the educational material or a sidebar like text area with the important information.
 
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version1.html" target="_blank">Article Page - Ver1</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version5-B.html" target="_blank">Checkout - Ver2</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version10.html">Webinar Page - Ver1</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version6.html">Ebook Description - Ver1</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version9.html">Event Page - Ver1</a>
-<a href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version11.html">Event Registration - Ver2</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version1.html" target="_blank">Article Page - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version5-B.html" target="_blank">Checkout - Ver2</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version10.html">Webinar Page - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version6.html">Ebook Description - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version9.html">Event Page - Ver1</a>
+<a class="inline-link" href="https://toripugh.com/prototype/cdew-test-v2/Prototype-Version11.html">Event Registration - Ver2</a>
 
-## ONGOING PROJECT
+## ~~ONGOING PROJECT~~
 
-This project is still in the prototype stage. I've made 14 different pages that correspond to areas on the site map. These go through the drip down process of the visitor flow in the content funnel. I chose to concentrate on the main parts of the page and left the footer and header out for the moment. They are two hardest parts of this endeavor, there is so much information that is required.
+I left before the project was finished. I'd made 14 different pages that correspond to areas on the site map. These go through the drip down process of the visitor flow in the content funnel. I chose to concentrate on the main parts of the page and left the footer and header out for the moment. They are two hardest parts of this endeavor, there is so much information that is required.

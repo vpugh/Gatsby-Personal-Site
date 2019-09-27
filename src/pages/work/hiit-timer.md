@@ -17,6 +17,7 @@ sub_title: "A sideproject, pushed into development"
 project_description: "Pushing my skills to make something I wanted to use at the time. I started to create this timer for myself and then realized there might be others who could use this. It's currently a work-in-progress. I'm working on being able to save your exercises individually. The next step is saving the sessions with different exercises. Then to save those sessions would be creating a login and using a database, probably Firebase for start."
 ---
 
+<img src="../../images/gallery/hiit/current-state.jpg" alt="test">
 I had grandiose plans at the initial planning of this app. Then I broke it down into many phases highlighting the important skills I'd need to learn to complete it. This project is broken down into different parts. Each part makes sense for transitioning into the next part.
 
 ## RECREATING TIMER IN REACT
@@ -41,9 +42,9 @@ An idea I'm working out in my mind was a suggestion. It would allow for a higher
 
 Further down the line, I would like to include a system for themeing the page. I can start with some premade colors I come up with. In the more distant future I could let people mess around and make whatever they want.
 
-<img src="/static/hiit-timer-initial-02e66613ecafd94954ae3f905193dbd7.jpg" alt="">
-<img src="/static/hiit-setting-initial-baedf7ddd13600d5d3727e11033ff915.jpg" alt="">
-<img src="/static/hiit-settings-abb368538973b0942f3de3a3558099e8.jpg" alt="">
+<img src="../../images/gallery/hiit/hiit-timer-initial.jpg" alt="test">
+<img src="../../images/gallery/hiit/hiit-setting-initial.jpg" alt="test">
+<img src="../../images/gallery/hiit/hiit-settings.jpg" alt="test">
 <div class="quote">
   Initial blank state, initial settings page, settings page filled out.
 </div>
