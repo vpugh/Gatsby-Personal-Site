@@ -28,7 +28,7 @@ I needed to develop/utilize an automated system to insert the relevant informati
 I subscribed to as many conference email lists as I could to see what other people were doing. I also found a great resource in [reallygoodemails.com](http://reallygoodemails.com/) and took note of some of the features of the emails such as subheaders, titles, buttons, and images. I started piecing together ideas on the general layouts, though keeping in mind I still needed to please my superiors.
 
 <img src="../../images/gallery/ucd/UCD-emails-2.jpg" alt="Consistent look and feel across all emails">
-<h2 class="quote">Keeping a consistent look and feel across all emails. This was tough on some of the more targeted emails.</h2>
+<div class="quote">Keeping a consistent look and feel across all emails. This was tough on some of the more targeted emails.</div>
 
 ## TYPES OF EMAILS
 
@@ -47,7 +47,7 @@ The registrants are general emails sent to people who are already registered. Th
 Starting a few days after the event the attendees will get these emails, reminding them about the courses they can take online and directing them to a page to find out how to redeem them. They will keep getting these emails until they have redeemed a course. These emails are very important and as such are more text heavy.
 
 <img src="../../images/gallery/ucd/UCD-code-1.jpg" alt="Emails system code with JSON files and nunjucks">
-<h2 class="quote">JSON files and Nunjucks templates do all the heavy-lifting for the email system. The files can be very long and complex but they have made everything a million times easier.</h2>
+<div class="quote">JSON files and Nunjucks templates do all the heavy-lifting for the email system. The files can be very long and complex but they have made everything a million times easier.</div>
 
 ## DEVELOPMENT SETUP
 
