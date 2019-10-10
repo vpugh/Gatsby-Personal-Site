@@ -6,13 +6,55 @@ import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import HomeBlog from "../components/home-blog";
 import Hero from "../components/hero";
+import styled from 'styled-components';
+
+const PortfolioPreviewContainer = styled.section`
+  padding: 80px 0;
+
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .pp-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    margin-top: .75rem;
+  }
+  .pp-subtitle {
+    font-size: 1rem;
+  }
+`;
+
+const PortfolioPreview = styled.div`
+  display: grid;
+  grid-template: auto/repeat(2, 1fr);
+  grid-gap: 30px;
+
+  @media (max-width: 480px) {
+    grid-template: auto/auto;
+  }
+`;
+
+const BlogPreview = styled.div`
+  display: grid;
+  grid-template: auto/repeat(2, 1fr);
+  grid-gap: 30px;
+
+  @media (max-width: 480px) {
+    grid-template: auto/auto;
+  }
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="UI/UX Developer" />
     <Hero />
-    <section className="portfolio-preview">
-      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px' }}>
+    <PortfolioPreviewContainer>
+      <PortfolioPreview>
         {data.workThumb.edges.map(({ node: project }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
             <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
@@ -20,15 +62,15 @@ const IndexPage = ({ data }) => (
             <p className="pp-subtitle">{project.frontmatter.description}</p>
           </Link>
         ))}
-      </div>
-    </section>
+      </PortfolioPreview>
+    </PortfolioPreviewContainer>
     <section className="blog underline">
       <h2 className="grid" style={{ padding: '10px 0' }}>
         <Link to="/blog" style={{ color: '#111' }}>
           Blog - Writings and Mental Musings
         </Link>
       </h2>
-      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px'}}>
+      <BlogPreview>
         {data.allMarkdownRemark.edges.map(({ node: post}) => {
           const title = post.frontmatter.title;
           const tags = post.frontmatter.tags;
@@ -43,7 +85,7 @@ const IndexPage = ({ data }) => (
             <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} fluidImage={fluidImage} />
           )
         })}
-      </div>
+      </BlogPreview>
       <Link className="btn block" to="/blog">Older Blog Post</Link>
     </section>
   </Layout>

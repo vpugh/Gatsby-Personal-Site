@@ -4,6 +4,64 @@ import PropTypes from "prop-types"
 import React from "react"
 import './header.scss';
 import SocialMedia from "./social-media";
+import styled from 'styled-components';
+
+const NavigationContainer = styled.div`
+  margin: 40px auto 0 auto;
+  max-width: 82%;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-items: space-between;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    display: block;
+    margin: 20px auto 0 auto;
+    max-width: fit-content(100%) / fit-content(100%);
+  }
+`;
+
+const NavigationContent = styled.nav`
+  display: flex;
+  @media (max-width: 480px) {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex: 1;
+    margin-bottom: 0;
+
+    @media (max-width: 480px) {
+      display: inline-block;
+      margin: 10px 0;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    padding: 0 .75rem;
+    margin-bottom: 0;
+    letter-spacing: 1.25px;
+    align-self: center;
+
+    @media (max-width: 480px) {
+      display: inline-block;
+      padding-left: 0;
+    }
+  }
+`;
+
+const NavLogo = styled.h1`
+  margin: 0;
+  flex: 1;
+  text-transform: uppercase;
+
+  .logo-link {
+    color: #424242;
+    text-decoration: none;
+  }
+`;
 
 const Header = ({ menuLinks, siteTitle }) => (
   <header
@@ -22,39 +80,16 @@ const Header = ({ menuLinks, siteTitle }) => (
         height: '20px',
       }}
     />
-    <div
-      style={{
-        margin: `40px auto 0 auto`,
-        maxWidth: '82%',
-        padding: `1.45rem 1.0875rem`,
-        display: 'flex',
-        justifyItems: 'space-between',
-        alignItems: 'center'
-      }}
-    >
-      <h1 style={{ margin: 0, flex: 1, textTransform: 'uppercase' }}>
-        <Link
-          to="/"
-          style={{
-            color: '#424242',
-            textDecoration: `none`,
-          }}
-        >
+    <NavigationContainer>
+      <NavLogo>
+        <Link to="/" className="logo-link">
           {siteTitle}
         </Link>
-      </h1>
-      <nav style={{ display: 'flex' }}>
-        <ul style={{ display: "flex", flex: 1, marginBottom: '0' }}>
+      </NavLogo>
+      <NavigationContent>
+        <ul>
           {menuLinks.map(link => (
-            <li
-              key={link.name}
-              style={{
-                listStyleType: `none`,
-                padding: `0 .75rem`,
-                marginBottom: '0',
-                letterSpacing: '1.25px'
-              }}
-            >
+            <li key={link.name}>
               {link.name === 'Contact' && (
                 <a className="link" href="mailto:hello@toripugh.com" rel="noopener noreferrer">
                   {link.name}
@@ -72,8 +107,8 @@ const Header = ({ menuLinks, siteTitle }) => (
           ))}
         </ul>
         <SocialMedia iconWidth={32} />
-      </nav>
-    </div>
+      </NavigationContent>
+    </NavigationContainer>
   </header>
 )
 

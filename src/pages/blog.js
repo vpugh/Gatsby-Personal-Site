@@ -3,13 +3,24 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import HomeBlog from "../components/home-blog";
+import styled from 'styled-components';
+
+const BlogHome = styled.div`
+  display: grid;
+  grid-template: auto/repeat(2, 1fr);
+  grid-gap: 30px;
+
+  @media (max-width: 480px) {
+    grid-template: auto/auto;
+  }
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
     <section className="blog">
       <h2 className="title" style={{ padding: '10px 0' }}>Writings and Mental Musings</h2>
-      <div style={{ display: 'grid', gridTemplate: 'auto/repeat(2, 1fr)', gridGap: '30px'}}>
+      <BlogHome>
         {data.allMarkdownRemark.edges.map(({ node: post}) => {
           const title = post.frontmatter.title;
           const tags = post.frontmatter.tags;
@@ -24,7 +35,7 @@ const IndexPage = ({ data }) => (
             <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} fluidImage={fluidImage} />
           )
         })}
-      </div>
+      </BlogHome>
     </section>
   </Layout>
 )

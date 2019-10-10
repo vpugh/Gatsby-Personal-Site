@@ -1,9 +1,44 @@
 import React from 'react';
-import './social-media.scss';
+import styled from 'styled-components';
+
+const SocialMediaContainer = styled.ul`
+  display: flex;
+  flex: 1;
+  margin-bottom: 0;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+  margin-left: 10px;
+
+  @media (max-width: 480px) {
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+
+  .soc {
+    display: inline-block;
+    margin-bottom: 0;
+    list-style-type: none;
+    padding: 0 .25rem;
+    line-height: 0;
+    
+    a {
+      display: inline-flex;
+    }
+
+    svg {
+      transition: 300ms ease-in-out;
+      fill: #969696;
+      &:hover {
+        fill: #606060;
+      }
+    }
+  }
+`;
 
 const SocialMedia = ({ iconWidth }) => {
   return (
-    <ul style={{ display: "flex", flex: 1, marginBottom: '0', borderLeft: '2px solid #ddd', paddingLeft: '20px', marginLeft: '10px' }}>
+    <SocialMediaContainer>
       <li className="soc">
         <a href="https://twitter.com/teekatwo" rel="noopener noreferrer" target="_blank" title="Twitter">
           <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid slice" width={iconWidth}>
@@ -41,7 +76,7 @@ const SocialMedia = ({ iconWidth }) => {
           </svg>
         </a>
       </li>
-    </ul>
+    </SocialMediaContainer>
   );
 };
 
