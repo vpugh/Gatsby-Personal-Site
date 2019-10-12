@@ -8,16 +8,22 @@ import styled from 'styled-components';
 
 const NavigationContainer = styled.div`
   margin: 40px auto 0 auto;
-  max-width: 82%;
-  padding: 1.45rem 1.0875rem;
-  display: flex;
-  justify-items: space-between;
-  align-items: center;
+
+  @media (min-width: 1024px) {
+    max-width: 82%;
+    padding: 1.45rem 1.0875rem;
+    display: flex;
+    justify-items: space-between;
+    align-items: center;  
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 
   @media (max-width: 480px) {
-    display: block;
-    margin: 20px auto 0 auto;
-    max-width: fit-content(100%) / fit-content(100%);
+    margin: 40px auto 0 auto;
+    text-align: center;
   }
 `;
 

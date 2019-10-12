@@ -40,12 +40,24 @@ const PortfolioPreview = styled.div`
 `;
 
 const BlogPreview = styled.div`
-  display: grid;
-  grid-template: auto/repeat(2, 1fr);
-  grid-gap: 30px;
+  @media (min-width: 480px) {
+    display: grid;
+    grid-template: auto/repeat(2, 1fr);
+    grid-gap: 30px;
+  }
 
-  @media (max-width: 480px) {
-    grid-template: auto/auto;
+  .blog--posts {
+    @media (min-width: 480px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px 0;
+    }
+    @media (max-width: 480px) {
+      display: block;
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
   }
 `;
 

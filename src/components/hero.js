@@ -14,6 +14,9 @@ const HeroIntro = styled.p`
   padding-top: 80px;
   @media (max-width: 768px) {
     padding-top: 20px;
+  }
+  
+  @media (max-width: 480px) {
     text-align: center;
   }
 
@@ -51,14 +54,8 @@ const HeroTitle = styled.h2`
   font-size: 1.6rem;
   font-weight: 800;
 
-  @media (max-width: 480px) {
-    padding-bottom: 20px;
-    font-size: 2rem;
-    text-align: center;
-  }
-
   @media (min-width: 768px) {
-    font-size: 2.6rem;
+    font-size: 3rem;
     line-height: 1.333;
     letter-spacing: 1px;
     padding-bottom: 6vh;
@@ -69,6 +66,17 @@ const HeroTitle = styled.h2`
     line-height: 1.2;
     font-weight: 700;
   }
+  
+  @media (max-width: 480px) {
+    padding-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 330px) {
+    font-size: 1.6rem;
+  }
+  
 
   a {
     text-decoration: underline;
