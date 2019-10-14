@@ -2,22 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby'
 import Image from 'gatsby-image';
 import kebabCase from "lodash/kebabCase"
-import './home-blog.scss';
-import styled from 'styled-components';
-
-const BlogPosts = styled.div`
-  @media (min-width: 480px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px 0;
-  }
-  @media (max-width: 480px) {
-    display: block;
-    &:not(:last-child) {
-      padding-bottom: 40px;
-    }
-  }
-`;
+import { BlogPosts, BlogTags, BlogText } from '../styles/home-blog-styled';
 
 const HomeBlog = ({ slug, image, title, date, tags, timeToRead, fluidImage }) => {
   return (
@@ -26,18 +11,18 @@ const HomeBlog = ({ slug, image, title, date, tags, timeToRead, fluidImage }) =>
         {image !== null && (
           <Image fluid={fluidImage} />
         )}
-        <div className="blog--text">
+        <BlogText>
           <h2 className="blog--title">
             {title}
           </h2>{" "}
           <p className="blog--subtitle">
             {date} | {timeToRead} {timeToRead > 1 ? 'Minutes' : 'Minute'}
           </p>
-        </div>
+        </BlogText>
       </Link>
-      <div className="blog--tags">
+      <BlogTags>
         {tags.map(tag => <Link to={`/tags/${kebabCase(tag)}`} className="blog--tag" key={tag}>{tag}</Link>)}
-      </div>
+      </BlogTags>
     </BlogPosts>
   )
 };

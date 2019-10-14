@@ -7,7 +7,7 @@ import kebabCase from "lodash/kebabCase"
 // Components
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
-import '../templates/tags.scss';
+import { AllTags } from '../styles/templates/tags-page-styled';
 import Layout from "../components/layout";
 
 const TagsPage = ({
@@ -19,7 +19,7 @@ const TagsPage = ({
     <SEO title="All Blog Tags" />
     <div>
       <h1>All Tags</h1>
-      <ul className="alltags">
+      <AllTags>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
@@ -27,7 +27,7 @@ const TagsPage = ({
             </Link>
           </li>
         ))}
-      </ul>
+      </AllTags>
     </div>
   </Layout>
 )

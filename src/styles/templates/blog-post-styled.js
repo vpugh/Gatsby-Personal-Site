@@ -1,6 +1,8 @@
-.text-body {
+import styled from 'styled-components';
+
+export const TextBody = styled.div`
   padding: 50px 0;
-  
+    
   p {
     font-size: 1.3rem;
     line-height: 1.6;
@@ -18,4 +20,4 @@
       color: #525252;
     }
   }
-}
+`;

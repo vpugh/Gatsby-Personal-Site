@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import SEO from "../components/seo"
 import Layout from '../components/layout';
 import Image from 'gatsby-image';
-import './postTemplate.scss';
+import { TextBody } from '../styles/templates/blog-post-styled';
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data;
@@ -15,7 +15,7 @@ const Template = ({ data }) => {
       )}
       <h1 style={{ marginBottom: '.25rem' }}>{post.frontmatter.title}</h1>
       <p><em>Published Date:</em> {post.frontmatter.date}</p>
-      <div className="text-body" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   );
 };

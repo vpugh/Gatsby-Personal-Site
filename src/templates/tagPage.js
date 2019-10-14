@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import './tags.scss';
+// import './tags.scss';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -12,7 +12,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout padTop={true}>
       <h1>{tagHeader}</h1>
-      <ul className="taglist">
+      <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 30px 0'}}>
         {edges.map(({ node }) => {
           const { title, path: slug } = node.frontmatter
           return (

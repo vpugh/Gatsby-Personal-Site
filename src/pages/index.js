@@ -6,60 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import HomeBlog from "../components/home-blog";
 import Hero from "../components/hero";
-import styled from 'styled-components';
-
-const PortfolioPreviewContainer = styled.section`
-  padding: 80px 0;
-
-  @media (max-width: 480px) {
-    padding: 30px 0;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  .pp-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-    margin-top: .75rem;
-  }
-  .pp-subtitle {
-    font-size: 1rem;
-  }
-`;
-
-const PortfolioPreview = styled.div`
-  display: grid;
-  grid-template: auto/repeat(2, 1fr);
-  grid-gap: 30px;
-
-  @media (max-width: 480px) {
-    grid-template: auto/auto;
-  }
-`;
-
-const BlogPreview = styled.div`
-  @media (min-width: 480px) {
-    display: grid;
-    grid-template: auto/repeat(2, 1fr);
-    grid-gap: 30px;
-  }
-
-  .blog--posts {
-    @media (min-width: 480px) {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 20px 0;
-    }
-    @media (max-width: 480px) {
-      display: block;
-      &:not(:last-child) {
-        padding-bottom: 20px;
-      }
-    }
-  }
-`;
+import { PortfolioPreview, PortfolioPreviewContainer, BlogPreview, BlogContainer } from '../styles/index-styled';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -76,7 +23,7 @@ const IndexPage = ({ data }) => (
         ))}
       </PortfolioPreview>
     </PortfolioPreviewContainer>
-    <section className="blog underline">
+    <BlogContainer>
       <h2 className="grid" style={{ padding: '10px 0' }}>
         <Link to="/blog" style={{ color: '#111' }}>
           Blog - Writings and Mental Musings
@@ -99,7 +46,7 @@ const IndexPage = ({ data }) => (
         })}
       </BlogPreview>
       <Link className="btn block" to="/blog">Older Blog Post</Link>
-    </section>
+    </BlogContainer>
   </Layout>
 )
 
