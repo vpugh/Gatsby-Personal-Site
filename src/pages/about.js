@@ -17,7 +17,7 @@ const AboutPage = () => (
         <h2 className="about--title">
         Driven by curiosity and a desire to make things work better.
         </h2>
-        <a className="btn block" href="https://toripugh.com/images/Resume-Victoria-Tori-Pugh.pdf" download>
+        <a className="btn block" href="../tpr.pdf" download="tori-pugh-resume">
           Download Resume
         </a>
       </AvatarContainer>
