@@ -1,11 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import HomeBlog from "../components/home-blog";
 import { BlogContainer, BlogHome } from '../styles/blog-styled';
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data, pageContext }) => {
+  const { currentPage, isFirstPage, isLastPage, totalPages } = pageContext;
+  const nextPage = `/blog/${String(currentPage + 1)}`;
+  const prevPage = currentPage === 2 ? '/blog' : `/blog/${String(currentPage - 1)}`
+
+  return (
   <Layout>
     <SEO title="Blog" />
     <BlogContainer>
@@ -26,15 +31,54 @@ const IndexPage = ({ data }) => (
           )
         })}
       </BlogHome>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        maxWidth: 500,
+        margin: '40px auto 20px auto',
+        borderTop: '1px solid #ddd',
+        paddingTop: 20,
+      }}>
+        {!isFirstPage && (
+          <Link to={prevPage} rel="prev">
+            Prev Page
+          </Link>
+        )}
+        {Array.from({ length: totalPages }, (_, index) => (
+            <Link key={index} to={`/blog${index === 0 ? '' : `/${index + 1}`}`} style={{ fontWeight: currentPage === index + 1 ? 'bold': '' }}>
+              {index + 1}
+            </Link>
+          ))}
+        {!isLastPage && (
+          <Link to={nextPage} rel="next">
+            Next Page
+          </Link>
+        )}
+      </div>
     </BlogContainer>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
 
 export const blogQuery = graphql`
-{
-  allMarkdownRemark(filter: {frontmatter: {draft: {eq: false}, date: {nin: "null"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+query($skip: Int!, $limit: Int!){
+  allMarkdownRemark(
+    filter: {
+      frontmatter: {
+        draft: {eq: false},
+        date: {nin: "null"},
+      },
+    },
+    sort: {
+      fields: frontmatter___date,
+      order: DESC
+    },
+    skip: $skip,
+    limit: $limit,
+    ) {
     edges {
       node {
         id

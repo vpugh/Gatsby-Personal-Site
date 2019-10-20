@@ -13,6 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
   const postTemplate = path.resolve('src/templates/post.js');
   const tagsTemplate = path.resolve('src/templates/tagPage.js');
   const workTemplate = path.resolve('src/templates/work.js');
+  const blogTemplate = path.resolve('src/templates//blog-template.js');
 
   return graphql(`{
     allMarkdownRemark {
@@ -77,6 +78,27 @@ exports.createPages = ({ actions, graphql }) => {
         component: postTemplate,
       })
     });
+
+    res.data.allMarkdownRemark.edges.forEach((_, index, postsArr) => {
+        const postsPerPage = 6;
+        const totalPages = Math.ceil(postsArr.length / postsPerPage);
+        const currentPage = index + 1;
+        const isFirstPage = index === 0;
+        const isLastPage = currentPage === totalPages;
+
+        createPage({
+          path: isFirstPage ? '/blog' : `/blog/${currentPage}`,
+          component: blogTemplate,
+          context: {
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            isFirstPage,
+            isLastPage,
+            currentPage,
+            totalPages,
+          }
+        })
+      })
 
     const tags = res.data.tagsGroup.group
 
