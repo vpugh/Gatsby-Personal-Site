@@ -16,7 +16,18 @@ exports.createPages = ({ actions, graphql }) => {
   const blogTemplate = path.resolve('src/templates//blog-template.js');
 
   return graphql(`{
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          draft: {eq: false},
+          date: {nin: "null"},
+        },
+      },
+      sort: {
+        fields: frontmatter___date,
+        order: DESC
+      }
+    ) {
       edges {
         node {
           html
@@ -26,6 +37,18 @@ exports.createPages = ({ actions, graphql }) => {
             title
             date
             tags
+          }
+        }
+        next {
+          frontmatter {
+            title
+            path
+          }
+        }
+        previous {
+          frontmatter {
+            title
+            path
           }
         }
       }
@@ -72,10 +95,14 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(res.errors);
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
+        context: {
+          next,
+          previous,
+        }
       })
     });
 
