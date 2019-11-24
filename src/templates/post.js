@@ -9,19 +9,23 @@ const Template = ({ data, pageContext }) => {
   const { next, previous } = pageContext;
   const { markdownRemark: post } = data;
 
-  const nextArticle = next && (
+  const emptyLink = (
+    <div style={{ width: '25%'}} />
+  )
+
+  const nextArticle = next ? (
     <Link to={next.frontmatter.path} style={{ maxWidth: '25%'}}>
       <strong>Next Article</strong> <br/>
       {next.frontmatter.title}
     </Link>
-  )
+  ) : emptyLink
 
-  const prevArticle = previous && (
+  const prevArticle = previous ? (
     <Link to={previous.frontmatter.path} style={{ maxWidth: '25%'}}>
       <strong>Previous Article</strong> <br/>
       {previous.frontmatter.title}
     </Link>
-  )
+  ) : emptyLink
 
   return (
     <Layout coverImage={post.frontmatter.cover_image.childImageSharp.fluid} padTop={true}>
