@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import SEO from "../components/seo"
 import Layout from '../components/layout';
 import Image from 'gatsby-image';
-import { TextBody } from '../styles/templates/blog-post-styled';
+import { TextBody, PostTitle, Date, ArticleLinks, ArticleLinkContainer } from '../styles/templates/blog-post-styled';
 
 const Template = ({ data, pageContext }) => {
   const { next, previous } = pageContext;
@@ -14,17 +14,21 @@ const Template = ({ data, pageContext }) => {
   )
 
   const nextArticle = next ? (
-    <Link to={next.frontmatter.path} style={{ maxWidth: '25%'}}>
-      <strong>Next Article</strong> <br/>
-      {next.frontmatter.title}
-    </Link>
+    <ArticleLinks>
+      <Link to={next.frontmatter.path}>
+        <strong>Next Article</strong> <br/>
+        {next.frontmatter.title}
+      </Link>
+    </ArticleLinks>
   ) : emptyLink
 
   const prevArticle = previous ? (
-    <Link to={previous.frontmatter.path} style={{ maxWidth: '25%'}}>
-      <strong>Previous Article</strong> <br/>
-      {previous.frontmatter.title}
-    </Link>
+    <ArticleLinks>
+      <Link to={previous.frontmatter.path}>
+        <strong>Previous Article</strong> <br/>
+        {previous.frontmatter.title}
+      </Link>
+    </ArticleLinks>
   ) : emptyLink
 
   return (
@@ -33,12 +37,12 @@ const Template = ({ data, pageContext }) => {
       {post.frontmatter.cover_image && (
         <Image fluid={post.frontmatter.cover_image.childImageSharp.fluid} style={{ marginBottom: '2rem'}} />
       )}
-      <h1 style={{ marginBottom: '.25rem' }}>{post.frontmatter.title}</h1>
-      <p><em>Published Date:</em> {post.frontmatter.date}</p>
+      <PostTitle>{post.frontmatter.title}</PostTitle>
+      <Date><em>Published Date:</em> {post.frontmatter.date}</Date>
       <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />
-      <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+      <ArticleLinkContainer>
         {prevArticle}{nextArticle}
-      </div>
+      </ArticleLinkContainer>
     </Layout>
   );
 };

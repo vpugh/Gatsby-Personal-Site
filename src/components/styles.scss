@@ -52,3 +52,10 @@ a {
   font-size: 1rem !important;
   padding: .25em .5em !important;
 }
+
+@media (max-width: 425px) {
+  p {
+    font-size: 1.1em !important;
+    line-height: 1.5 !important;
+  }
+}
