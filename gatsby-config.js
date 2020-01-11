@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://toripugh.com`,
     title: `Tori Pugh`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `A UI/UX Engineer bumbling through tech. A place to showoff my work and ideas and writing about my experiences and my learning adventures.`,
     author: `@gatsbyjs`,
     menuLinks: [
       {
