@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import ThemeContext from "../context/theme-context"
 import { baseColor, darkColor } from "../utils/color-helper"
+import { Container } from "../styles/layout-styled"
 
 import Header from "./header-v2"
 import "./styles.scss"
@@ -47,22 +48,14 @@ const Layout = ({ children, padTop }) => {
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata.title}
       />
-      <div
-        style={{
-          width: "100%",
-          maxWidth: 1280,
-          boxSizing: "border-box",
-          padding: "0px 80px",
-          margin: "0 auto",
-        }}
-      >
+      <Container>
         <main
           style={{ paddingTop: padTop ? "80px" : "" }}
           className={themeColor}
         >
           {children}
         </main>
-      </div>
+      </Container>
       <Footer />
     </>
   )

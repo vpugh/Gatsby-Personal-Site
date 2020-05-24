@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components"
+
+export const AboutPadding = styled.section`
+  background: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    padding: 30px 50px;
+    margin-top: 40px;
+  }
+`
 
 export const AboutContainer = styled.div`
   font-size: 1.2rem;
@@ -14,18 +24,27 @@ export const AboutContainer = styled.div`
     @media (min-width: 768px) {
       width: 60%;
     }
+    @media (max-width: 450px) {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+    }
   }
 
   .sidebar {
     width: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 0 30px 30px;
     color: #707070;
+    @media (max-width: 425px) {
+      padding: 0;
+    }
     @media (min-width: 768px) {
       width: 35%;
     }
   }
-`;
+`
 
 export const Quote = styled.h3`
   font-size: 1.5rem;
@@ -35,6 +54,10 @@ export const Quote = styled.h3`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 1.4rem;
@@ -59,18 +82,18 @@ export const Quote = styled.h3`
     }
 
     .orange & {
-      background: #ffb64d
+      background: #ffb64d;
     }
-    
+
     .green & {
       background: #aed87c;
     }
-    
+
     .blue & {
       background: #4dd8ff;
     }
   }
-`;
+`
 
 export const AvatarContainer = styled.div`
   display: block;
@@ -78,20 +101,20 @@ export const AvatarContainer = styled.div`
   padding-bottom: 2rem;
 
   .avatar--grid {
-    position: relative;
-    display: inline-block;
+    // position: relative;
+    // display: inline-block;
+    display: flex;
     margin-bottom: 2rem;
   }
 
   .avatar--img {
-
     &:before {
-      content: '';
-      background-image: url('../images/pic.jpg');
+      content: "";
+      background-image: url("../images/pic.jpg");
       display: block;
       background-size: cover;
       background-position: 50% 70%;
-    border-radius: 50%;
+      border-radius: 50%;
     }
 
     @media (max-width: 480px) {
@@ -104,7 +127,7 @@ export const AvatarContainer = styled.div`
     }
 
     @media (min-width: 768px) {
-      float: left;
+      // float: left;
       &:before {
         width: 100px;
         height: 100px;
@@ -113,8 +136,11 @@ export const AvatarContainer = styled.div`
   }
 
   .avatar--text {
-    float: left;
-    margin: 25px 0 0 25px;
+    // float: left;
+    margin-left: 25px;
+    align-self: center;
+    margin-bottom: 0;
+    // margin: 25px 0 0 25px;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -149,4 +175,4 @@ export const AvatarContainer = styled.div`
       width: 100%;
     }
   }
-`;
+`

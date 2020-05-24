@@ -1,15 +1,17 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { AboutContainer, AvatarContainer, Quote } from "../styles/about-styled"
+import {
+  AboutContainer,
+  AvatarContainer,
+  Quote,
+  AboutPadding,
+} from "../styles/about-styled"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="UI/UX Developer" />
-    <section
-      className="about"
-      style={{ background: "#fff", padding: "30px 50px", marginTop: 40 }}
-    >
+    <AboutPadding>
       <AvatarContainer>
         <div className="avatar--grid">
           <div className="avatar--img" />
@@ -137,8 +139,9 @@ const AboutPage = () => (
         <div className="sidebar">
           <h3>Development</h3>
           <p>
-            HTML, CSS, SASS, Javascript, Git, Gulp, NodeJs, Vue, React, Jest,
-            Gatsby <span className="learning">Wordpress</span>
+            HTML, CSS/SASS, Javascript, Git, Gulp, NodeJs, React, Jest, React
+            Testing Library, GraphQL, MirageJS, Gatsby{" "}
+            <span className="learning">Wordpress</span>
           </p>
           <h3>Design</h3>
           <p>
@@ -154,7 +157,7 @@ const AboutPage = () => (
           </p>
         </div>
       </AboutContainer>
-    </section>
+    </AboutPadding>
   </Layout>
 )
 

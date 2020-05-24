@@ -7,6 +7,55 @@ export const HeroContainer = styled.section`
   }
 `
 
+export const HeroWidthContainer = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    padding: 0 80px;
+  }
+`
+
+export const HeroInnerContainer = styled.div`
+  padding: 40px 0 20px 0;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    max-width: 74%;
+  }
+`
+
+export const IntroTextContainer = styled.div`
+  padding: 20px 40px;
+  @media (max-width: 425px) {
+    padding: 20px;
+  }
+`
+
+export const IntroTitle = styled.p`
+  font-size: 54px;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  line-height: 1.1;
+  color: ${props => props.color};
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+`
+
+export const IntroSubtitle = styled.p`
+  font-size: 28px;
+  line-height: 1.3;
+  @media (max-width: 425px) {
+    font-size: 1.1rem;
+  }
+`
+
 export const HeroIntro = styled.p`
   padding-top: 80px;
   @media (max-width: 768px) {

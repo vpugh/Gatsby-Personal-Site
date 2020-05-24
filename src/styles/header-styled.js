@@ -76,11 +76,45 @@ export const NavigationContent = styled.nav`
 
 export const NavLogo = styled.h1`
   margin: 0;
-  flex: 1;
   text-transform: uppercase;
-
-  .logo-link {
-    color: #424242;
-    text-decoration: none;
+  letter-spacing: 1.4px;
+  font-size: 1.6rem;
+`
+export const HeaderFlexContainer = styled.div`
+  width: 100%;
+  height: 80px;
+  background: ${props => props.bgColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 450px) {
+    height: auto;
+  }
+`
+export const HeaderInnerContainer = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 0 80px;
+  }
+`
+export const FlexSPCenter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 450px) {
+    flex-direction: ${props => (props.direction ? "column" : null)};
+    padding: 20px 0 10px 0;
+  }
+`
+export const menuItem = styled.div`
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 1px;
+  border-bottom: 2px solid transparent;
+  "&:hover": {
+    color: #fff;
+    opacity: 0.5;
   }
 `
