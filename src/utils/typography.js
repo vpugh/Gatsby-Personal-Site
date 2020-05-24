@@ -11,8 +11,15 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["canada-type-gibson", "Helvetica Neue",
-  "Segoe UI", "Helvetica" ,"Arial", "sans-serif"],
+  fontDisplay: "swap",
+  bodyFontFamily: [
+    "canada-type-gibson",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
   bodyColor: "hsla(0,0%,0%,0.7)",
 })
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const PortfolioPreviewContainer = styled.section`
   padding: 80px 0;
@@ -13,23 +13,24 @@ export const PortfolioPreviewContainer = styled.section`
   .pp-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: .5rem;
-    margin-top: .75rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
   }
   .pp-subtitle {
     font-size: 1rem;
   }
-`;
+`
 
 export const PortfolioPreview = styled.div`
   display: grid;
-  grid-template: auto/repeat(2, 1fr);
+  grid-template: auto/repeat(3, 1fr);
   grid-gap: 30px;
+  color: #fff;
 
   @media (max-width: 480px) {
     grid-template: auto/auto;
   }
-`;
+`
 
 export const BlogContainer = styled.section`
   border-top: 2px solid #e1e1e1;
@@ -38,7 +39,7 @@ export const BlogContainer = styled.section`
   @media (min-width: 768px) {
     padding: 90px 0 0;
   }
-`;
+`
 
 export const BlogPreview = styled.div`
   padding: 0 0 40px 0;
@@ -64,4 +65,4 @@ export const BlogPreview = styled.div`
       }
     }
   }
-`;
+`

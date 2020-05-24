@@ -1,17 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
-import Image from 'gatsby-image'
+import Image from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from 'gatsby'
-import HomeBlog from "../components/home-blog";
-import Hero from "../components/hero";
-import { PortfolioPreview, PortfolioPreviewContainer, BlogPreview, BlogContainer } from '../styles/index-styled';
+import { graphql } from "gatsby"
+import HomeBlog from "../components/home-blog"
+import Hero from "../components/hero"
+import {
+  PortfolioPreview,
+  PortfolioPreviewContainer,
+  BlogPreview,
+  BlogContainer,
+} from "../styles/index-styled"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="UI/UX Developer" />
     <Hero />
+    <SEO title="Front End Developer &amp; UX Designer" />
     <PortfolioPreviewContainer>
       <PortfolioPreview>
         {data.workThumb.edges.map(({ node: project }) => (
@@ -23,7 +28,7 @@ const IndexPage = ({ data }) => (
         ))}
       </PortfolioPreview>
     </PortfolioPreviewContainer>
-    <BlogContainer>
+    {/* <BlogContainer>
       <h2 className="grid" style={{ padding: '10px 0' }}>
         <Link to="/blog" style={{ color: '#111' }}>
           Blog - Writings and Mental Musings
@@ -46,61 +51,68 @@ const IndexPage = ({ data }) => (
         })}
       </BlogPreview>
       <Link className="btn block" to="/blog">Older Blog Post</Link>
-    </BlogContainer>
+    </BlogContainer> */}
   </Layout>
 )
 
 export default IndexPage
 
 export const indexQuery = graphql`
-{
-  allMarkdownRemark(limit: 6, filter: {frontmatter: {draft: {eq: false}, date: {nin: "null"}}}, sort: {fields: frontmatter___date, order: DESC}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          path
-          excerpt
-          title
-          tags
-          cover_image {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
+  {
+    allMarkdownRemark(
+      limit: 6
+      filter: { frontmatter: { draft: { eq: false }, date: { nin: "null" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            excerpt
+            title
+            tags
+            cover_image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            date(formatString: "MMMM Do, YYYY")
+          }
+          timeToRead
+        }
+      }
+    }
+    workThumb: allMarkdownRemark(
+      sort: { fields: frontmatter___role }
+      filter: { frontmatter: { client: { regex: "" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            client
+            github
+            draft
+            description
+            deliverable
+            role
+            project_description
+            url
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
-          date(formatString: "MMMM Do, YYYY")
+          html
         }
-        timeToRead
       }
     }
   }
-  workThumb: allMarkdownRemark(sort: {fields: frontmatter___role}, filter: {frontmatter: {client: {regex: ""}}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          client
-          github
-          draft
-          description
-          deliverable
-          role
-          project_description
-          url
-          image {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        html
-      }
-    }
-  }
-}
 `

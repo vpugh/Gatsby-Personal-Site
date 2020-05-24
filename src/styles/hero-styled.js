@@ -1,18 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const HeroContainer = styled.section`
   padding: 0;
   @media (min-width: 768px) {
     padding: 3rem 0 0;
   }
-`;
+`
 
 export const HeroIntro = styled.p`
   padding-top: 80px;
   @media (max-width: 768px) {
     padding-top: 20px;
+    font-size: 42px;
   }
-  
+
   @media (max-width: 480px) {
     text-align: center;
   }
@@ -44,7 +45,7 @@ export const HeroIntro = styled.p`
       }
     }
   }
-`;
+`
 
 export const HeroTitle = styled.h2`
   line-height: 1.5;
@@ -63,20 +64,19 @@ export const HeroTitle = styled.h2`
     line-height: 1.2;
     font-weight: 700;
   }
-  
+
   @media (max-width: 480px) {
     padding-bottom: 20px;
     font-size: 2rem;
     text-align: center;
   }
-  
+
   @media (max-width: 330px) {
     font-size: 1.6rem;
   }
-  
 
   a {
     text-decoration: underline;
     transition: 300ms ease-in-out;
   }
-`;
+`
