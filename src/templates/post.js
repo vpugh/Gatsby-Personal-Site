@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import kebabCase from "lodash/kebabCase"
 import Image from "gatsby-image"
 import {
   TextBody,
@@ -57,6 +58,15 @@ const Template = ({ data, pageContext }) => {
           <Date>
             <em>Published Date:</em> {post.frontmatter.date}
           </Date>
+          {post.frontmatter.tags.map(tag => (
+            <Link
+              to={`/tags/${kebabCase(tag)}`}
+              style={{ marginRight: 10, color: "rgba(0, 0, 0, .5)" }}
+              key={tag}
+            >
+              #{tag}
+            </Link>
+          ))}
           <TextBody dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
         <ArticleLinkContainer style={{ padding: 40 }}>
@@ -76,6 +86,7 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
+        tags
         cover_image {
           childImageSharp {
             fluid {

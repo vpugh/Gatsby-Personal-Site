@@ -37,7 +37,7 @@ const Layout = ({ children, padTop }) => {
     const color = generateThemeColor()
     setThemeColor(color)
     document.body.classList = color.toString()
-    document.body.style.background = darkColor(color)
+    document.documentElement.style.background = darkColor(color)
     context.setColor(color)
   }, [])
 
