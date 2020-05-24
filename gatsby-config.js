@@ -6,22 +6,22 @@ module.exports = {
     author: `@gatsbyjs`,
     menuLinks: [
       {
-        name: 'Work',
-        link: '/work'
+        label: "Work",
+        link: "/work",
       },
       {
-        name: 'About',
-        link: '/about'
+        label: "About",
+        link: "/about",
       },
       {
-        name: 'Contact',
-        link: '/contact'
+        label: "Contact",
+        link: "/contact",
       },
       {
-        name: 'Blog',
-        link: '/blog'
-      }
-    ]
+        label: "Writing",
+        link: "/blog",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -39,14 +39,14 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/src/pages/blog`,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `work`,
         path: `${__dirname}/src/pages/work`,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -68,18 +68,18 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      }
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -110,28 +110,28 @@ module.exports = {
               },
             },
           },
-        ]
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/images`,
-        name: 'uploads',
+        ],
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/images`,
+        name: "uploads",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         typekit: {
-          id: 'nvf8ecr'
-        }
-      }
+          id: "nvf8ecr",
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        query:`
+        query: `
         {
           site {
             siteMetadata {
@@ -174,11 +174,11 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Tori Pugh's Tech/Life RSS Feed"
-          }
-        ]
-      }
-    }
+            title: "Tori Pugh's Tech/Life RSS Feed",
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { HeroContainer } from "../styles/hero-styled"
 import ThemeContext from "../context/theme-context"
-import { baseColor } from "../utils/color-helper"
+import { selectedColor } from "../utils/color-helper"
 
 const Hero = () => {
   const context = useContext(ThemeContext)
@@ -34,7 +34,7 @@ const Hero = () => {
                 fontWeight: 600,
                 marginBottom: "1.8rem",
                 lineHeight: 1.1,
-                color: baseColor(context.color),
+                color: selectedColor(context.color, "darker"),
               }}
             >
               Front End Developer &amp; UX Designer.

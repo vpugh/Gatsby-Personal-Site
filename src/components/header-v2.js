@@ -1,36 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const menuLinks = [
-  {
-    label: "work",
-    link: "/work",
-  },
-  {
-    label: "about",
-    link: "/about",
-  },
-  {
-    label: "contact",
-    link: "/contact",
-  },
-  {
-    label: "blog",
-    link: "/blog",
-  },
-]
-
-const bodyStyle = {
-  display: "flex",
-  flexDirection: "column",
-  // -webkit-box-align: center;
-  alignItems: "center",
-  zIndex: 2,
-  position: "relative",
-  paddingTop: 60,
-}
-
-const Header = ({ color, siteTitle }) => {
+const Header = ({ color, menuLinks, siteTitle }) => {
   return (
     <div
       style={{
@@ -96,7 +67,6 @@ const Header = ({ color, siteTitle }) => {
                 style={{
                   display: "inline-block",
                   marginRight: 20,
-                  textTransform: "capitalize",
                   marginTop: 1,
                   borderBottom: "2px solid transparent",
                   "&:hover": {
@@ -105,7 +75,6 @@ const Header = ({ color, siteTitle }) => {
                   },
                 }}
                 activeStyle={{
-                  // fontWeight: "600",
                   borderBottom: "2px solid #444",
                 }}
               >

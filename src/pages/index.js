@@ -23,35 +23,45 @@ const IndexPage = ({ data }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
             <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
             <h3 className="pp-title">{project.frontmatter.title}</h3>
-            <p className="pp-subtitle">{project.frontmatter.description}</p>
           </Link>
         ))}
       </PortfolioPreview>
     </PortfolioPreviewContainer>
-    {/* <BlogContainer>
-      <h2 className="grid" style={{ padding: '10px 0' }}>
-        <Link to="/blog" style={{ color: '#111' }}>
-          Blog - Writings and Mental Musings
+    <BlogContainer>
+      <h2 className="grid" style={{ padding: "10px 0" }}>
+        <Link to="/blog" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+          Latest Articles
         </Link>
       </h2>
       <BlogPreview>
-        {data.allMarkdownRemark.edges.map(({ node: post}) => {
-          const title = post.frontmatter.title;
-          const tags = post.frontmatter.tags;
-          const fluidImage = post.frontmatter.cover_image.childImageSharp.fluid;
-          const image = post.frontmatter.cover_image;
-          const date = post.frontmatter.date;
-          const slug = post.frontmatter.path;
-          const id = post.id;
-          const timeToRead = post.timeToRead;
+        {data.allMarkdownRemark.edges.map(({ node: post }) => {
+          const title = post.frontmatter.title
+          const tags = post.frontmatter.tags
+          const fluidImage = post.frontmatter.cover_image.childImageSharp.fluid
+          const image = post.frontmatter.cover_image
+          const date = post.frontmatter.date
+          const slug = post.frontmatter.path
+          const id = post.id
+          const timeToRead = post.timeToRead
 
           return (
-            <HomeBlog slug={slug} image={image} title={title} date={date} tags={tags} timeToRead={timeToRead} key={id} fluidImage={fluidImage} />
+            <HomeBlog
+              slug={slug}
+              image={image}
+              title={title}
+              date={date}
+              tags={tags}
+              timeToRead={timeToRead}
+              key={id}
+              fluidImage={fluidImage}
+            />
           )
         })}
       </BlogPreview>
-      <Link className="btn block" to="/blog">Older Blog Post</Link>
-    </BlogContainer> */}
+      <Link className="btn block" to="/blog">
+        Older Blog Post
+      </Link>
+    </BlogContainer>
   </Layout>
 )
 

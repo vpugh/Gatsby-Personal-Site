@@ -20,7 +20,7 @@ const Layout = ({ children, padTop }) => {
         siteMetadata {
           menuLinks {
             link
-            name
+            label
           }
           title
         }
@@ -35,7 +35,7 @@ const Layout = ({ children, padTop }) => {
   useEffect(() => {
     const color = generateThemeColor()
     setThemeColor(color)
-    document.body.classList.add(color.toString())
+    document.body.classList = color.toString()
     document.body.style.background = darkColor(color)
     context.setColor(color)
   }, [])
