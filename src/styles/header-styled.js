@@ -108,13 +108,16 @@ export const FlexSPCenter = styled.div`
     padding: 20px 0 10px 0;
   }
 `
-export const menuItem = styled.div`
-  display: inline-block;
-  margin-right: 20px;
-  margin-top: 1px;
-  border-bottom: 2px solid transparent;
-  "&:hover": {
-    color: #fff;
-    opacity: 0.5;
+export const MenuItem = styled.div`
+  a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 1px;
+    border-bottom: 2px solid transparent;
+    transition: 300ms ease-in-out;
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.5);
+    }
   }
 `

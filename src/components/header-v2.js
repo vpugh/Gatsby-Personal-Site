@@ -6,6 +6,7 @@ import {
   HeaderInnerContainer,
   FlexSPCenter,
   NavLogo,
+  MenuItem,
 } from "../styles/header-styled"
 
 const Header = ({ color, menuLinks, siteTitle }) => {
@@ -23,25 +24,17 @@ const Header = ({ color, menuLinks, siteTitle }) => {
             </Link>
             <FlexSPCenter>
               {menuLinks.map(menuItem => (
-                <Link
-                  to={menuItem.link}
-                  key={menuItem.label}
-                  style={{
-                    display: "inline-block",
-                    marginRight: 20,
-                    marginTop: 1,
-                    borderBottom: "2px solid transparent",
-                    "&:hover": {
-                      color: "#fff",
-                      opacity: 0.5,
-                    },
-                  }}
-                  activeStyle={{
-                    borderBottom: "2px solid #444",
-                  }}
-                >
-                  {menuItem.label}
-                </Link>
+                <MenuItem>
+                  <Link
+                    to={menuItem.link}
+                    key={menuItem.label}
+                    activeStyle={{
+                      borderBottom: "2px solid #444",
+                    }}
+                  >
+                    {menuItem.label}
+                  </Link>
+                </MenuItem>
               ))}
             </FlexSPCenter>
           </FlexSPCenter>

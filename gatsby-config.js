@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://toripugh.com`,
     title: `Tori Pugh`,
-    description: `A UI/UX Engineer bumbling through tech. A place to showoff my work and ideas and writing about my experiences and my learning adventures.`,
+    twitterUsername: "@teekatwo",
+    description: `A Front End Developer & UX Designer bumbling through tech. A place to showoff my work and ideas and writing about my experiences and my learning adventures.`,
     author: `@gatsbyjs`,
     menuLinks: [
       {
