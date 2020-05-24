@@ -25,7 +25,6 @@ export const darkColor = color => {
 }
 
 export const selectedColor = (color, type, opacity) => {
-  console.log("Selected Color Opacity", opacity)
   if (type === "base") {
     switch (color) {
       case "orange":

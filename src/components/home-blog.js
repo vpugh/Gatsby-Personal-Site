@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
-import kebabCase from "lodash/kebabCase"
-import { BlogPosts, BlogTags, BlogText } from "../styles/home-blog-styled"
+import { BlogPosts, BlogText } from "../styles/home-blog-styled"
 
 const HomeBlog = ({
   slug,

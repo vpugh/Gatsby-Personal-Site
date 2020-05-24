@@ -14,7 +14,7 @@ const Header = ({ color, menuLinks, siteTitle }) => {
       <GradientBorder style={{ height: 8 }} />
       <HeaderFlexContainer bgColor={color}>
         <HeaderInnerContainer>
-          <FlexSPCenter direction>
+          <FlexSPCenter direction="left">
             <Link
               to="/"
               style={{ color: "rgba(0,0,0,0.7)", textDecoration: "none" }}
@@ -25,6 +25,7 @@ const Header = ({ color, menuLinks, siteTitle }) => {
               {menuLinks.map(menuItem => (
                 <Link
                   to={menuItem.link}
+                  key={menuItem.label}
                   style={{
                     display: "inline-block",
                     marginRight: 20,
