@@ -19,7 +19,7 @@ const Hero = () => {
         <HeroInnerContainer>
           <IntroTextContainer>
             <IntroTitle color={selectedColor(context.color, "darker")}>
-              Front End Developer &amp; UX Designer
+              UX Engineer &amp; Problem-Solver
             </IntroTitle>
             <IntroSubtitle>
               What I do is simple to say but complex in execution. I generate

@@ -24,7 +24,7 @@ const Header = ({ color, menuLinks, siteTitle }) => {
             </Link>
             <FlexSPCenter>
               {menuLinks.map(menuItem => (
-                <MenuItem>
+                <MenuItem key={menuItem.label}>
                   <Link
                     to={menuItem.link}
                     key={menuItem.label}

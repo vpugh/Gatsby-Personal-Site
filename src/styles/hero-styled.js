@@ -25,12 +25,11 @@ export const HeroInnerContainer = styled.div`
   @media (min-width: 768px) {
     padding-top: 80px;
     padding-bottom: 60px;
-    max-width: 74%;
   }
 `
 
 export const IntroTextContainer = styled.div`
-  padding: 20px 40px;
+  padding: 20px 0;
   @media (max-width: 425px) {
     padding: 20px;
   }
@@ -51,8 +50,13 @@ export const IntroTitle = styled.p`
 export const IntroSubtitle = styled.p`
   font-size: 28px;
   line-height: 1.3;
+  padding: 0 40px;
+  margin: 0 auto;
   @media (max-width: 425px) {
     font-size: 1.1rem;
+  }
+  @media (min-width: 768px) {
+    max-width: 74%;
   }
 `
 

@@ -22,18 +22,6 @@ const Title = styled.h2`
   }
 `
 
-const Grid = styled.div`
-  color: rgba(255, 255, 255, 0.9);
-  @media (max-width: 480px) {
-  }
-
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template: auto/repeat(2, 1fr);
-    grid-gap: 30px;
-  }
-`
-
 const ContactPage = () => {
   return (
     <Layout padTop={true}>
