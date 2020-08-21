@@ -1,14 +1,14 @@
 ---
-path: '/work/pomodoro-timer-app'
+path: "/work/pomodoro-timer-app"
 title: "Pomodoro Timer App"
-excerpt: ''
+excerpt: ""
 tags: []
 cover_image:
 draft: false
 date:
 url: "https://vpugh.github.io/vue-pomodoro-timer/"
 github: "https://github.com/vpugh/vue-pomodoro-timer"
-image: ../../images/thumbnails/pomodoro-timer.jpg
+image: ../../images/thumbnails/compressed/pomodoro-timer.jpg
 description: "Case Study + Github Pages App"
 client: "Self"
 role: "Designer, Developer"
@@ -49,4 +49,3 @@ For this version I did not make the app in CodePen, I used the Vue CLI and expor
 
 <img src="../../images/gallery/pomodoro/pomodoro-tomatillo.jpg" alt="Rest style aka Tomatillo">
 <div class="quote">The rest period tomatillo theme.</div>
-

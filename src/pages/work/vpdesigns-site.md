@@ -1,14 +1,14 @@
 ---
-path: '/work/vpdesigns'
+path: "/work/vpdesigns"
 title: "VPDesigns"
-excerpt: ''
+excerpt: ""
 tags: []
 cover_image:
 draft: false
 date:
 url: "http://victoriapugh.net/"
 github: "https://github.com/vpugh/vp-site"
-image: ../../images/thumbnails/vpdesigns-site.jpg
+image: ../../images/thumbnails/compressed/vpdesigns-site.jpg
 description: "Case Study"
 client: "VPDesigns"
 role: "Designer, Developer"
