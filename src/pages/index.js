@@ -66,7 +66,7 @@ export const indexQuery = graphql`
           cover_image {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -93,7 +93,7 @@ export const indexQuery = graphql`
           image {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
