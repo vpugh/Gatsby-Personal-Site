@@ -15,23 +15,22 @@ import {
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="UI/UX Developer" />
     <Hero />
+    <SEO title="Front End Developer &amp; UX Designer" />
     <PortfolioPreviewContainer>
       <PortfolioPreview>
         {data.workThumb.edges.map(({ node: project }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
             <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
             <h3 className="pp-title">{project.frontmatter.title}</h3>
-            <p className="pp-subtitle">{project.frontmatter.description}</p>
           </Link>
         ))}
       </PortfolioPreview>
     </PortfolioPreviewContainer>
     <BlogContainer>
       <h2 className="grid" style={{ padding: "10px 0" }}>
-        <Link to="/blog" style={{ color: "#111" }}>
-          Blog - Writings and Mental Musings
+        <Link to="/blog" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+          Latest Articles
         </Link>
       </h2>
       <BlogPreview>
@@ -85,7 +84,7 @@ export const indexQuery = graphql`
             tags
             cover_image {
               childImageSharp {
-                fluid(maxWidth: 446, maxHeight: 446) {
+                fluid(maxWidth: 445, maxHeight: 265) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -115,7 +114,7 @@ export const indexQuery = graphql`
             url
             image {
               childImageSharp {
-                fluid(maxWidth: 445, maxHeight: 265) {
+                fluid(maxWidth: 446, maxHeight: 414) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

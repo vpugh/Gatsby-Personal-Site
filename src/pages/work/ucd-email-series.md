@@ -1,14 +1,14 @@
 ---
-path: '/work/ucd-email-series'
+path: "/work/ucd-email-series"
 title: "UCD Email Series"
-excerpt: ''
+excerpt: ""
 tags: []
 cover_image:
 draft: false
 date:
 url: ""
 github: ""
-image: ../../images/thumbnails/updates-email.jpg
+image: ../../images/thumbnails/compressed/updates-email.jpg
 description: "Case Study"
 client: "Updates in Clinical Dentistry"
 role: "Designer, Developer, Email Developer"

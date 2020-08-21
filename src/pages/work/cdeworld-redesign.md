@@ -1,14 +1,14 @@
 ---
-path: '/work/cdeworld-redesign'
+path: "/work/cdeworld-redesign"
 title: "CDEWorld Redesign"
-excerpt: ''
+excerpt: ""
 tags: []
 cover_image:
 draft: false
 date:
 url: ""
 github: ""
-image: ../../images/thumbnails/cdeworld-redesign.jpg
+image: ../../images/thumbnails/compressed/cdeworld-redesign.jpg
 description: "Case Study"
 client: "CDEWorld"
 role: "Designer, Developer"
