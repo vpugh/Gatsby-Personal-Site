@@ -65,7 +65,7 @@ export const indexQuery = graphql`
           tags
           cover_image {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 446, maxHeight: 446) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
@@ -92,7 +92,7 @@ export const indexQuery = graphql`
           url
           image {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 353, maxHeight: 353) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
