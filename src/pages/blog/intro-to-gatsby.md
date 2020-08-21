@@ -1,9 +1,9 @@
 ---
-path: '/blog/intro-to-gatsby--getting-started'
-title: 'Intro to Gatsby - Getting Started'
-excerpt: 'First local development of Gatsby and some important info'
-tags: ['web development', 'gatsby', 'react', 'javascript', 'learning']
-cover_image: ../../images/david-iskander-iWTamkU5kiI-unsplash.jpg
+path: "/blog/intro-to-gatsby--getting-started"
+title: "Intro to Gatsby - Getting Started"
+excerpt: "First local development of Gatsby and some important info"
+tags: ["web development", "gatsby", "react", "javascript", "learning"]
+cover_image: ../../images/compressed/david-iskander-iWTamkU5kiI-unsplash.jpg
 draft: false
 date: 2019-09-08
 ---
@@ -34,9 +34,9 @@ After following these instructions your Gatsby site is up and running. This will
 
 In Gatsby, there are two important files: `gatsby-config.js` and `gatsby-node.js`. Unlike a plain React site, these two files are the heart and soul of your site. The config is going to control your access to files and plugins and the node will control the creation of pages, among other things.
 
-
 ### Gatsby-config.js
-This is where your site configuration, *surprise surprise*, for your site will be placed.
+
+This is where your site configuration, _surprise surprise_, for your site will be placed.
 
 The options that I used on this page were siteMetadata and plugins. There are a few more that I haven't made use of yet, <a class="inline-link" aria-label="GatsbyJS Docs for Configuration Options"  title="configuration options" href="https://www.gatsbyjs.org/docs/gatsby-config/#configuration-options" target="_blank" rel="noopener noreferrer">configuration options</a>
 
@@ -74,16 +74,16 @@ This is an object that will contain site wide data that you want to keep consist
 
 ```javascript
 plugins: [
-    `gatsby-transformer-json`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `project`,
-        path: `${__dirname}/src/data`
-      }
+  `gatsby-transformer-json`,
+  `gatsby-plugin-react-helmet`,
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `project`,
+      path: `${__dirname}/src/data`,
     },
-  ]
+  },
+]
 ```
 
 Plugins can either be only listed by name or some may take options. If it takes options, it will need to be in object form with a resolve being the listed name, followed by an options object.
@@ -94,7 +94,7 @@ This is where usage of the Gatsby node APIs are expected. The most important par
 
 CreatePages works by taking a GraphQL schema and using that to reference and query some data. That queried data can be used in a function to create pages.
 
-``` javascript
+```javascript
   workPages: allMarkdownRemark(sort: {fields: frontmatter___role}, filter: {frontmatter: {client: {regex: ""}}}) {
     edges {
       node {
@@ -116,16 +116,16 @@ CreatePages works by taking a GraphQL schema and using that to reference and que
   }
 ```
 
-  This GraphQL query finds all my work projects and will return them in an array. I will then take this array and loop through it and create pages for each item in the array.
+This GraphQL query finds all my work projects and will return them in an array. I will then take this array and loop through it and create pages for each item in the array.
 
-  ```javascript
-    res.data.workPages.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: workTemplate,
-      })
-    })
-  ```
+```javascript
+res.data.workPages.edges.forEach(({ node }) => {
+  createPage({
+    path: node.frontmatter.path,
+    component: workTemplate,
+  })
+})
+```
 
 Resources:
 
@@ -142,14 +142,14 @@ Gatsby will automatically create a page for any React component created in the `
 Example new page. Create a new file `src/pages/about.js` with the following code.
 
 ```javascript
-  import React from "react"
-  const AboutPage = () => (
-    <main>
-      <h1>About the Author</h1>
-      <p>Welcome to my Gatsby site.</p>
-    </main>
-  )
-  export default AboutPage
+import React from "react"
+const AboutPage = () => (
+  <main>
+    <h1>About the Author</h1>
+    <p>Welcome to my Gatsby site.</p>
+  </main>
+)
+export default AboutPage
 ```
 
 Something as simple as the code above would generate a new page in Gatsby. You could then go to `localhost:8000/about` and see your new page.

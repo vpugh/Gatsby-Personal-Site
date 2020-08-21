@@ -1,14 +1,14 @@
 ---
-path: '/work/hiit-timer'
+path: "/work/hiit-timer"
 title: "HIIT Timer App"
-excerpt: ''
+excerpt: ""
 tags: []
 cover_image:
 draft: false
 date:
 url: "https://hiit-timer-tp.herokuapp.com/"
 github: "https://github.com/vpugh/hiit-timer-react"
-image: ../../images/thumbnails/hiit-timer.jpg
+image: ../../images/thumbnails/compressed/hiit-timer.jpg
 description: "Case Study + Heroku App"
 client: "Self"
 role: "Designer, Developer"

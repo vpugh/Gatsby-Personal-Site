@@ -1,14 +1,14 @@
 ---
-path: '/blog/gatsby-blog--next-and-previous-links'
-title: 'Gatsby Blog: Next and Previous Links'
-excerpt: 'Adding previous and next links to blog page'
-tags: ['web development', 'gatsby', 'react', 'javascript', 'learning']
-cover_image: ../../images/19ytkgnjkp74p5jxyqr9.png
+path: "/blog/gatsby-blog--next-and-previous-links"
+title: "Gatsby Blog: Next and Previous Links"
+excerpt: "Adding previous and next links to blog page"
+tags: ["web development", "gatsby", "react", "javascript", "learning"]
+cover_image: ../../images/compressed/19ytkgnjkp74p5jxyqr9.png
 draft: false
 date: 2019-11-18
 ---
 
-I wanted to add next and previous links to the bottom of my blog posts for a bit. To make this work I started by going into `gatsby-node` and finding the query that is used to generate my blog posts. 
+I wanted to add next and previous links to the bottom of my blog posts for a bit. To make this work I started by going into `gatsby-node` and finding the query that is used to generate my blog posts.
 
 This query just gets all the nodes (the markdown files) and get's the html, id and frontmatter in the form of the path name, blog title, blog date and blog tags associated with each markdown file.
 
@@ -32,21 +32,22 @@ allMarkdownRemark {
 Then I find the section of code that actually generates the blog post page. It's taking that query and looping over each node and then passing it the path and telling it what component to render.
 
 ```javascript
- res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: postTemplate,
-      })
-    });
+res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  createPage({
+    path: node.frontmatter.path,
+    component: postTemplate,
+  })
+})
 ```
 
-The changes that I need to make are getting the next and previous from my query and then passing those into my generated pages. For `allMarkdownRemark` there is an option for `next` and `previous` under `edges`. 
+The changes that I need to make are getting the next and previous from my query and then passing those into my generated pages. For `allMarkdownRemark` there is an option for `next` and `previous` under `edges`.
 
 ![next and previous are options under edges](https://thepracticaldev.s3.amazonaws.com/i/yff4amb61ljc50gq96pw.png)
 
-Adding these options under node (equal to node not inside node) in the query so I can access that information in my createPage function. 
+Adding these options under node (equal to node not inside node) in the query so I can access that information in my createPage function.
 
 Changing the query to resemble this:
+
 ```javascript
 allMarkdownRemark {
   edges {
@@ -79,13 +80,14 @@ allMarkdownRemark {
 Now we have access to previous and next and their frontmatter information, path and title, in the createPage function.
 
 To update the blog post generating with our next and previous, just add them behind node. Updating the code to this:
+
 ```javascript
 res.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
   createPage({
     path: node.frontmatter.path,
     component: postTemplate,
   })
-});
+})
 ```
 
 Now our createPage has access to next and previous. What we can do now is pass these down to the component by using `context`. Context will be an object with the information that will be passed to a component. It can then be accessed in a component by using `pageContext`.
@@ -98,9 +100,9 @@ res.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     context: {
       next,
       previous,
-    }
+    },
   })
-});
+})
 ```
 
 Now if we go into the component and use `pageContext` we can destructure it to get next and previous.
