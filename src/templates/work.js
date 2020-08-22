@@ -28,9 +28,6 @@ const WorkTemplate = ({ data }) => {
       >
         <WorkIntroBlock>
           <p>
-            <strong>Client:</strong> {project.frontmatter.client}
-          </p>
-          <p>
             <strong>Role:</strong> {project.frontmatter.role}
           </p>
           <p>

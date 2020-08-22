@@ -10,6 +10,7 @@ url: ""
 github: ""
 image: ../../images/thumbnails/compressed/updates-email.jpg
 description: "Case Study"
+order: 4
 client: "Updates in Clinical Dentistry"
 role: "Designer, Developer, Email Developer"
 deliverable: "Email System and Single Emails"

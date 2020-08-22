@@ -12,7 +12,7 @@ export const HeroWidthContainer = styled.div`
   max-width: 1280px;
   box-sizing: border-box;
   margin: 0 auto;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     padding: 0 80px;
   }
 `
@@ -36,7 +36,7 @@ export const IntroTextContainer = styled.div`
 `
 
 export const IntroTitle = styled.p`
-  font-size: 54px;
+  font-size: 62px;
   font-weight: 600;
   margin-bottom: 1.8rem;
   line-height: 1.1;
@@ -48,15 +48,18 @@ export const IntroTitle = styled.p`
 `
 
 export const IntroSubtitle = styled.p`
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.3;
-  padding: 0 40px;
   margin: 0 auto;
+  /* padding: 0 40px; */
   @media (max-width: 425px) {
     font-size: 1.1rem;
   }
-  @media (min-width: 768px) {
-    max-width: 74%;
+  @media (min-width: 1024px) {
+    max-width: 73%;
+  }
+  @media (min-width: 1440px) {
+    max-width: 73%;
   }
 `
 

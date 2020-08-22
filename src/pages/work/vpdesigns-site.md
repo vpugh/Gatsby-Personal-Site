@@ -13,6 +13,7 @@ description: "Case Study"
 client: "VPDesigns"
 role: "Designer, Developer"
 deliverable: "Website"
+order: 5
 sub_title: "Designing and developing a freelance website to convert new to digital customers"
 project_description: "Wanting to start a freelance company and working under the royal we I wanted to create a professional site to attract businessess. This needed to be clear, concise, and a little showy."
 ---

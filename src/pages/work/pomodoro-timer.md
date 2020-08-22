@@ -1,6 +1,6 @@
 ---
 path: "/work/pomodoro-timer-app"
-title: "Pomodoro Timer App"
+title: "Pomodoro Timer"
 excerpt: ""
 tags: []
 cover_image:
@@ -11,6 +11,7 @@ github: "https://github.com/vpugh/vue-pomodoro-timer"
 image: ../../images/thumbnails/compressed/pomodoro-timer.jpg
 description: "Case Study + Github Pages App"
 client: "Self"
+order: 3
 role: "Designer, Developer"
 deliverable: "Github Pages Site"
 sub_title: "A development challenge that turned into it's own app"

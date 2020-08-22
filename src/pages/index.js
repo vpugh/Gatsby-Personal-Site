@@ -22,7 +22,6 @@ const IndexPage = ({ data }) => (
         {data.workThumb.edges.map(({ node: project }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
             <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
-            <h3 className="pp-title">{project.frontmatter.title}</h3>
           </Link>
         ))}
       </PortfolioPreview>
@@ -58,7 +57,11 @@ const IndexPage = ({ data }) => (
           )
         })}
       </BlogPreview>
-      <Link className="btn block" to="/blog">
+      <Link
+        className="btn block"
+        style={{ width: "100%", textAlign: "center", marginBottom: 20 }}
+        to="/blog"
+      >
         Older Blog Post
       </Link>
     </BlogContainer>
@@ -96,7 +99,7 @@ export const indexQuery = graphql`
       }
     }
     workThumb: allMarkdownRemark(
-      sort: { fields: frontmatter___role }
+      sort: { fields: frontmatter___order }
       filter: { frontmatter: { client: { regex: "" } } }
     ) {
       edges {
@@ -114,7 +117,7 @@ export const indexQuery = graphql`
             url
             image {
               childImageSharp {
-                fluid(maxWidth: 353, maxHeight: 353) {
+                fluid(maxWidth: 545, maxHeight: 545) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

@@ -73,4 +73,17 @@ export const selectedColor = (color, type, opacity) => {
         return "#ddd"
     }
   }
+
+  if (type === "lightest") {
+    switch (color) {
+      case "orange":
+        return "#ffeed5"
+      case "green":
+        return "#e6ffc8"
+      case "blue":
+        return "#abedff"
+      default:
+        return "#f9f9f9"
+    }
+  }
 }

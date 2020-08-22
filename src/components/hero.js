@@ -22,7 +22,7 @@ const Hero = () => {
               UX Engineer &amp; Problem-Solver
             </IntroTitle>
             <IntroSubtitle>
-              What I do is simple to say but complex in execution. I generate
+              What I do is simple to say but complex in execution. Create
               solutions, code stuff, and design things.
             </IntroSubtitle>
           </IntroTextContainer>

@@ -23,7 +23,7 @@ export const PortfolioPreviewContainer = styled.section`
 
 export const PortfolioPreview = styled.div`
   display: grid;
-  grid-template: auto/repeat(3, 1fr);
+  grid-template: auto/repeat(2, 1fr);
   grid-gap: 30px;
   color: rgba(255, 255, 255, 0.9);
 

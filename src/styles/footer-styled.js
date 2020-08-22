@@ -1,21 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
-  text-align: center;
+  text-align: left;
   padding: 40px 0 20px;
   background-color: #f9f9f9;
   margin-top: 60px;
   @media (min-width: 768px) {
-    text-align: left;
-    padding: 90px 0 40px;
+    margin-top: 90px;
   }
 
   > div {
     margin: 0 auto;
     max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
   }
-`;
+`
 
 export const FooterCTA = styled.h3`
   font-weight: 400;
@@ -26,20 +24,20 @@ export const FooterCTA = styled.h3`
   }
   @media (min-width: 768px) {
     font-size: 1.9rem;
+    margin-bottom: 3.5rem;
   }
-`;
+`
 
 export const FooterSocial = styled.ul`
   font-size: 1.1rem;
-  padding: 20px 0;
   margin: 0;
   @media (min-width: 768px) {
     font-size: 14px;
-    padding: 0 0 30px 0;
   }
 
   li {
     display: inline-block;
+    margin: 0;
   }
 
   a {
@@ -50,12 +48,12 @@ export const FooterSocial = styled.ul`
       color: #777;
     }
   }
-`;
+`
 
 export const FooterCopyright = styled.div`
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #4a4a4a;
-  
+
   a {
     color: #4a4a4a;
     text-decoration: underline;
@@ -63,4 +61,4 @@ export const FooterCopyright = styled.div`
   @media only screen and (min-width: 1024px) {
     font-size: 14px;
   }
-`;
+`

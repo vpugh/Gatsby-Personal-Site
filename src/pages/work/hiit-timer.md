@@ -13,6 +13,7 @@ description: "Case Study + Heroku App"
 client: "Self"
 role: "Designer, Developer"
 deliverable: "Heroku Hosted App"
+order: 2
 sub_title: "A sideproject, pushed into development"
 project_description: "Pushing my skills to make something I wanted to use at the time. I started to create this timer for myself and then realized there might be others who could use this. It's currently a work-in-progress. I'm working on being able to save your exercises individually. The next step is saving the sessions with different exercises. Then to save those sessions would be creating a login and using a database, probably Firebase for start."
 ---
