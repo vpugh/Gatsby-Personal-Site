@@ -28,6 +28,9 @@ const WorkTemplate = ({ data }) => {
       >
         <WorkIntroBlock>
           <p>
+            <strong>{project.frontmatter.description}</strong>
+          </p>
+          <p>
             <strong>Role:</strong> {project.frontmatter.role}
           </p>
           <p>
@@ -79,6 +82,7 @@ export const workpageQuery = graphql`
         github
         role
         deliverable
+        description
         project_description
         sub_title
       }
