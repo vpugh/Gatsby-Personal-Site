@@ -7,6 +7,11 @@ import {
 } from "../styles/footer-styled"
 import ThemeContext from "../context/theme-context"
 import { selectedColor } from "../utils/color-helper"
+import TwitterIcon from "./svg/twitter"
+import InstagramIcon from "./svg/instagram-icon"
+import DribbbleIcon from "./svg/dribbble-icon"
+import CodepenIcon from "./svg/codepen-icon"
+import GithubIcon from "./svg/github-icon"
 
 const Footer = () => {
   const context = useContext(ThemeContext)
@@ -29,9 +34,6 @@ const Footer = () => {
           Let's work together
         </p>
         <FooterCTA>
-          {/* <strong>Get in Touch.</strong> If you've got an inquiry for a job or
-          project, a general question, or something I didn't specify. */}
-          {/* I′m open for new opportunities, including freelance or contract jobs. */}
           <a
             className="inline-link"
             href="mailto:hello@toripugh.com"
@@ -48,58 +50,63 @@ const Footer = () => {
             flexDirection: "row-reverse",
             justifyContent: "space-between",
             alignItems: "center",
-            paddingBottom: 20,
+            paddingBottom: 10,
           }}
         >
           <FooterSocial>
             <li>
               <a
+                style={{ display: "flex", alignItems: "center" }}
                 href="https://twitter.com/teekatwo"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Twitter"
               >
-                Twitter
+                <TwitterIcon /> Twitter
               </a>
             </li>
             <li>
               <a
+                style={{ display: "flex", alignItems: "center" }}
                 href="https://dribbble.com/teekatwo"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Dribbble"
               >
-                Dribbble
+                <DribbbleIcon /> Dribbble
               </a>
             </li>
             <li>
               <a
+                style={{ display: "flex", alignItems: "center" }}
                 href="https://codepen.io/Vpugh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Codepen"
               >
-                Codepen
+                <CodepenIcon /> Codepen
               </a>
             </li>
             <li>
               <a
+                style={{ display: "flex", alignItems: "center" }}
                 href="https://github.com/vpugh"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Github"
               >
-                Github
+                <GithubIcon /> Github
               </a>
             </li>
             <li>
               <a
+                style={{ display: "flex", alignItems: "center" }}
                 href="https://instagram.com/toripugh"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instagram"
               >
-                Instagram
+                <InstagramIcon /> Instagram
               </a>
             </li>
           </FooterSocial>

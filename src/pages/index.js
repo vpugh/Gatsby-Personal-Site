@@ -12,6 +12,7 @@ import {
   BlogPreview,
   BlogContainer,
 } from "../styles/index-styled"
+import RightChevron from "../components/svg/right-chevron"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -27,11 +28,23 @@ const IndexPage = ({ data }) => (
       </PortfolioPreview>
     </PortfolioPreviewContainer>
     <BlogContainer>
-      <h2 className="grid" style={{ padding: "10px 0" }}>
-        <Link to="/blog" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-          Latest Articles
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <h2 className="grid">
+          <span style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+            Latest Articles
+          </span>
+        </h2>
+        <Link style={{ textAlign: "center", marginBottom: 20 }} to="/blog">
+          <h2 style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+            All Articles <RightChevron height={18} />
+          </h2>
         </Link>
-      </h2>
+      </div>
       <BlogPreview>
         {data.allMarkdownRemark.edges.map(({ node: post }) => {
           const title = post.frontmatter.title
@@ -57,13 +70,6 @@ const IndexPage = ({ data }) => (
           )
         })}
       </BlogPreview>
-      <Link
-        className="btn block"
-        style={{ width: "100%", textAlign: "center", marginBottom: 20 }}
-        to="/blog"
-      >
-        Older Blog Post
-      </Link>
     </BlogContainer>
   </Layout>
 )
