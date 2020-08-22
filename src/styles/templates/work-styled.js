@@ -40,6 +40,9 @@ export const TextBody = styled.div`
     @media (max-width: 450px) {
       font-size: 1rem;
     }
+    > a {
+      text-decoration: underline;
+    }
   }
   h2 {
     margin-bottom: 1rem;
@@ -49,6 +52,9 @@ export const TextBody = styled.div`
       margin-bottom: 0.75rem;
       margin-top: 1.4rem;
     }
+  }
+  h3 {
+    margin-bottom: 0.5rem;
   }
   blockquote {
     margin-left: -20px;

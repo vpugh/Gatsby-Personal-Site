@@ -7,7 +7,7 @@ cover_image:
 draft: false
 date:
 url: ""
-github: ""
+github: "https://github.com/vpugh/personal-recipes"
 image: ../../images/thumbnails/compressed/personal-recipes.jpg
 description: "Case Study"
 client: "Family Memeber"
@@ -28,19 +28,21 @@ The weekends were spent inside and I was looking for something to distract my mi
 
 ## Design & Research
 
+<img src="../../images/gallery/personal-recipes/Color-Scheme.jpg" alt="Personal Recipes homepage">
+
 The initial design made was a test in making something Dribbble-esque. Something fancy and visually appealing. I'd done some research and decided to pick this pale pink as the theme color, it had a high-class look about it.
 
 After development I learned quickly that going for just visual resulted in a poor user experience. I course corrected and redid the layout to be more friendly to getting what I wanted and now looking super pretty.
 
 ### Homepage
 
-> Combo image of initial image from dribbble and current page
+<img src="../../images/gallery/personal-recipes/Homepage-Transistion.jpg" alt="Personal Recipes homepage">
 
 The initial homepage design was very visual, pictures of food groups and other appetizing things. The thought was it was about food this would all aid in making it more appealing or interesting.
 
 ### Add Recipes
 
-> Combo image of initial image from dribbble and current page
+<img src="../../images/gallery/personal-recipes/Add-Recipe-Transistion.jpg" alt="Personal Recipes homepage">
 
 The next page to work on was the add recipes page. Full disclaimer, I'm not much of a cooker/baker, so I had to do some research and get feedback on how these things were used and how some people would want them used.
 
@@ -48,7 +50,7 @@ It seemed pretty straightforward but then there was some complications with the 
 
 ### View Recipe
 
-> Combo image of initial image from dribbble and current page
+<img src="../../images/gallery/personal-recipes/View-Recipe-Transistion.jpg" alt="Personal Recipes homepage">
 
 The final page in the very basic layout was one to actually look at the recipe. This would be were you were redirected after the recipe was added and also were you'd navigate normally. This page went through a few iterations of finding out what the correct hierarchy there was for showing information.
 
@@ -62,4 +64,28 @@ I did not use [Apollo](https://www.apollographql.com/), maybe a missed opportuni
 
 Starting development I was working with the assumption of a REST API. To mock the data and hopefully get it as close to the finished product as I could I used [Mirage](https://miragejs.com/). I randomly saw it one day and thought it was better than [MockAPI](https://www.mockapi.io/) purely on the thought that I wasn't dependent on making actual calls. So keeping it all on my local machine made adjustments easier and faster.
 
+### Mirage - mock data
+
 This was a crucial part in getting my data set, knowing what types each should be and what I expected in my code. I had some missteps but it was easier to course correct since I was in control of all the data.
+
+I could also set in place a system for adding and deleting since I was able to replicate these actions. This helped me in the long run since I just had to make tweaks later on when using the actual GraphQL queries and mutations.
+
+### Hasura DB + GraphQL
+
+<img src="../../images/gallery/personal-recipes/GraphQ-Mutation-Add-Recipe.jpg" alt="Personal Recipes homepage">
+
+After having the mock data setup and ready to go it was time to work on making the real API requests with a database. Since I decided to go with Hasura, I had to learn the ins and outs of that setup. This included the proper way to use Authorization Bearer Tokens, manage permissions, and using mutations and queries for GraphQL.
+
+Setting up the actual database was much easier since I had everything the way I wanted from the mock data, it was a JSON file. With some minor tweaking with changes from using fake API calls to getting data from real ones everything was setup pretty fast.
+
+### Authentication/Authorization
+
+While working with the mockdata, I had built out an entire system for authentication/authorization. But I didn't feel very secure about using it out in the wild. There are a lot of things that could go wrong so I didn't want my first attempt to cause a breach and loss of data. Though I did do everything as correct as possible, this meant hashing the saved password in my database and salting them and using bcrypt to check for a match.
+
+I did some quick research and decided to use [Auth0](https://auth0.com/). I'd heard of it before and it's something I've seen many companies use. They had a lot of material to help figure out how to use it. It wasn't easy there is a lot of contridictary information in regards to the difference versions that can be used. It was tough and long proces but in the end I got it to work. That was pretty much the last piece in the puzzle.
+
+## Bringing it all together
+
+I've got it running on [Netlify](https://www.netlify.com/) and am currently testing it myself before releasing it to my family and then potentially anyone else interested. It's been a long process, about 4-5 months, started in March, and still chugging along.
+
+I've kept the current set of features to a minimum and if I have the ability will build in more things in the future, like shopping lists, complex recipe lists, interactions with other sites, and uploading images.
