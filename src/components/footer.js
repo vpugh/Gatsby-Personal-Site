@@ -4,6 +4,8 @@ import {
   FooterCTA,
   FooterSocial,
   FooterCopyright,
+  FooterEmail,
+  FooterSocialContainer,
 } from "../styles/footer-styled"
 import ThemeContext from "../context/theme-context"
 import { selectedColor } from "../utils/color-helper"
@@ -22,37 +24,17 @@ const Footer = () => {
       }}
     >
       <div>
-        <p
-          style={{
-            fontSize: "4.2em",
-            marginTop: 0,
-            marginBottom: ".5rem",
-            letterSpacing: "-1px",
-            fontWeight: 600,
-          }}
+        <FooterCTA>Let's work together</FooterCTA>
+        <FooterEmail
+          className="inline-link"
+          href="mailto:hello@toripugh.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="hello@toripugh.com"
         >
-          Let's work together
-        </p>
-        <FooterCTA>
-          <a
-            className="inline-link"
-            href="mailto:hello@toripugh.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="hello@toripugh.com"
-          >
-            hello@toripugh.com
-          </a>
-        </FooterCTA>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row-reverse",
-            justifyContent: "space-between",
-            alignItems: "center",
-            paddingBottom: 10,
-          }}
-        >
+          hello@toripugh.com
+        </FooterEmail>
+        <FooterSocialContainer>
           <FooterSocial>
             <li>
               <a
@@ -116,7 +98,7 @@ const Footer = () => {
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </FooterCopyright>
-        </div>
+        </FooterSocialContainer>
       </div>
     </FooterContainer>
   )

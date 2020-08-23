@@ -3,10 +3,10 @@ import styled from "styled-components"
 export const HeaderContainer = styled.header`
   background: transparent;
   margin-bottom: 1.45rem;
-  width: '100%',
-    maxWidth: 1280,
-    boxSizing: 'border-box',
-    padding: '0px 80px',
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0px 80px;
 `
 
 export const GradientBorder = styled.div`

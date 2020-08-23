@@ -14,7 +14,7 @@ const generateThemeColor = () => {
   return themeColors[Math.floor(Math.random() * themeColors.length)]
 }
 
-const Layout = ({ children, padTop }) => {
+const Layout = ({ children, padTop, responsiveCollapse = false }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -48,7 +48,7 @@ const Layout = ({ children, padTop }) => {
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata.title}
       />
-      <Container>
+      <Container responsiveCollapse={responsiveCollapse || null}>
         <main
           style={{ paddingTop: padTop ? "80px" : "" }}
           className={themeColor}

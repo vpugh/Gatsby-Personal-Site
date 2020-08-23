@@ -12,7 +12,7 @@ import {
 const WorkTemplate = ({ data }) => {
   const project = data.markdownRemark
   return (
-    <Layout>
+    <Layout responsiveCollapse={true}>
       <SEO title={`Work - ${project.frontmatter.title}`} />
       <div style={{ margin: "0 auto", textAlign: "center" }}>
         <WorkTitle>{project.frontmatter.title}</WorkTitle>

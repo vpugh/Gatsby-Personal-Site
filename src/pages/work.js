@@ -60,7 +60,7 @@ export default Work
 export const queryW = graphql`
   {
     work: allMarkdownRemark(
-      sort: { fields: frontmatter___role }
+      sort: { fields: frontmatter___order }
       filter: { frontmatter: { client: { regex: "" } } }
     ) {
       edges {
