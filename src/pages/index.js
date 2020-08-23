@@ -17,7 +17,7 @@ import RightChevron from "../components/svg/right-chevron"
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero />
-    <SEO title="Front End Developer &amp; UX Designer" />
+    <SEO title="UX Engineer | Front End Developer &amp; UI/UX Designer" />
     <PortfolioPreviewContainer>
       <PortfolioPreview>
         {data.workThumb.edges.map(({ node: project }) => (
