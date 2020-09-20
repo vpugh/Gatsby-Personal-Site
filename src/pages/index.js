@@ -12,27 +12,39 @@ import {
   BlogPreview,
   BlogContainer,
 } from "../styles/index-styled"
+import RightChevron from "../components/svg/right-chevron"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero />
-    <SEO title="Front End Developer &amp; UX Designer" />
+    <SEO title="UX Engineer | Front End Developer &amp; UI/UX Designer" />
     <PortfolioPreviewContainer>
       <PortfolioPreview>
         {data.workThumb.edges.map(({ node: project }) => (
           <Link to={project.frontmatter.path} key={project.frontmatter.title}>
             <Image fluid={project.frontmatter.image.childImageSharp.fluid} />
-            <h3 className="pp-title">{project.frontmatter.title}</h3>
           </Link>
         ))}
       </PortfolioPreview>
     </PortfolioPreviewContainer>
     <BlogContainer>
-      <h2 className="grid" style={{ padding: "10px 0" }}>
-        <Link to="/blog" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-          Latest Articles
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <h2 className="grid">
+          <span style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+            Latest Articles
+          </span>
+        </h2>
+        <Link style={{ textAlign: "center", marginBottom: 20 }} to="/blog">
+          <h2 style={{ color: "rgba(255, 255, 255, 0.9)" }}>
+            All Articles <RightChevron height={18} />
+          </h2>
         </Link>
-      </h2>
+      </div>
       <BlogPreview>
         {data.allMarkdownRemark.edges.map(({ node: post }) => {
           const title = post.frontmatter.title
@@ -58,9 +70,6 @@ const IndexPage = ({ data }) => (
           )
         })}
       </BlogPreview>
-      <Link className="btn block" to="/blog">
-        Older Blog Post
-      </Link>
     </BlogContainer>
   </Layout>
 )
@@ -84,7 +93,7 @@ export const indexQuery = graphql`
             tags
             cover_image {
               childImageSharp {
-                fluid(maxWidth: 445, maxHeight: 265) {
+                fluid(maxWidth: 545, maxHeight: 265) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -96,7 +105,7 @@ export const indexQuery = graphql`
       }
     }
     workThumb: allMarkdownRemark(
-      sort: { fields: frontmatter___role }
+      sort: { fields: frontmatter___order }
       filter: { frontmatter: { client: { regex: "" } } }
     ) {
       edges {
@@ -114,7 +123,7 @@ export const indexQuery = graphql`
             url
             image {
               childImageSharp {
-                fluid(maxWidth: 446, maxHeight: 414) {
+                fluid(maxWidth: 545, maxHeight: 545) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

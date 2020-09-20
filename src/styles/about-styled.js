@@ -1,31 +1,53 @@
-import styled from 'styled-components';
+import styled from "styled-components"
+
+export const AboutPadding = styled.section`
+  background: #fff;
+  padding: 30px;
+  @media (min-width: 768px) {
+    padding: 30px 50px;
+    margin-top: 40px;
+  }
+`
 
 export const AboutContainer = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-around;
     align-items: end;
+
+    > p {
+      line-height: 1.5;
+    }
   }
 
   .text-container {
     width: 100%;
     @media (min-width: 768px) {
-      width: 60%;
+      width: 51%;
+    }
+    @media (max-width: 450px) {
+      p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
     }
   }
 
   .sidebar {
     width: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 0 30px 30px;
     color: #707070;
+    @media (max-width: 425px) {
+      padding: 0;
+    }
     @media (min-width: 768px) {
       width: 35%;
     }
   }
-`;
+`
 
 export const Quote = styled.h3`
   font-size: 1.5rem;
@@ -35,6 +57,10 @@ export const Quote = styled.h3`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 1.4rem;
@@ -59,18 +85,18 @@ export const Quote = styled.h3`
     }
 
     .orange & {
-      background: #ffb64d
+      background: #ffb64d;
     }
-    
+
     .green & {
       background: #aed87c;
     }
-    
+
     .blue & {
       background: #4dd8ff;
     }
   }
-`;
+`
 
 export const AvatarContainer = styled.div`
   display: block;
@@ -78,20 +104,20 @@ export const AvatarContainer = styled.div`
   padding-bottom: 2rem;
 
   .avatar--grid {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
+    @media (min-width: 768px) {
+      display: flex;
+      margin-bottom: 2rem;
+    }
   }
 
   .avatar--img {
-
     &:before {
-      content: '';
-      background-image: url('../images/pic.jpg');
+      content: "";
+      background-image: url("../images/pic.jpg");
       display: block;
       background-size: cover;
       background-position: 50% 70%;
-    border-radius: 50%;
+      border-radius: 50%;
     }
 
     @media (max-width: 480px) {
@@ -104,7 +130,7 @@ export const AvatarContainer = styled.div`
     }
 
     @media (min-width: 768px) {
-      float: left;
+      /* // float: left; */
       &:before {
         width: 100px;
         height: 100px;
@@ -113,15 +139,19 @@ export const AvatarContainer = styled.div`
   }
 
   .avatar--text {
-    float: left;
-    margin: 25px 0 0 25px;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 25px 0px 20px 25px;
+    @media (min-width: 768px) {
+      margin: 0;
+      align-self: center;
+      margin-left: 25px;
+    }
   }
 
   .about--title {
     line-height: 1.5;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
 
     @media (max-width: 480px) {
@@ -149,4 +179,4 @@ export const AvatarContainer = styled.div`
       width: 100%;
     }
   }
-`;
+`

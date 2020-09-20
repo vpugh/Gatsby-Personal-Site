@@ -1,46 +1,79 @@
-import React from 'react';
-import { graphql } from 'gatsby'
-import Layout from '../components/layout';
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { WorkTitle, WorkSubtitle, WorkIntroBlock, TextBody } from '../styles/templates/work-styled';
+import {
+  WorkTitle,
+  WorkSubtitle,
+  WorkIntroBlock,
+  TextBody,
+} from "../styles/templates/work-styled"
 
 const WorkTemplate = ({ data }) => {
-  const project = data.markdownRemark;
+  const project = data.markdownRemark
   return (
-    <Layout>
+    <Layout responsiveCollapse={true}>
       <SEO title={`Work - ${project.frontmatter.title}`} />
-      <WorkTitle>{project.frontmatter.title}</WorkTitle>
-      <WorkSubtitle>{project.frontmatter.sub_title}</WorkSubtitle>
-      <WorkIntroBlock>
-        <p>
-          <strong>Client:</strong> {project.frontmatter.client}
-        </p>
-        <p>
-          <strong>Role:</strong> {project.frontmatter.role}
-        </p>
-        <p>
-          <strong>Deliverable:</strong> {project.frontmatter.deliverable}
-        </p>
-        <p>
-          <strong>Project Description:</strong> {project.frontmatter.project_description}
-        </p>
-        {project.frontmatter.url && (
-          <a className="btn block" href={project.frontmatter.url} title="" rel="noopener noreferrer" target="_blank">Site</a>
-        )}
-        {project.frontmatter.github && (
-          <a className="inline-link" href={project.frontmatter.github} title="" rel="noopener noreferrer" target="_blank">Github</a>
-        )}
-      </WorkIntroBlock>
-      <TextBody dangerouslySetInnerHTML={{ __html: project.html }} />
+      <div style={{ margin: "0 auto", textAlign: "center" }}>
+        <WorkTitle>{project.frontmatter.title}</WorkTitle>
+        <WorkSubtitle>{project.frontmatter.sub_title}</WorkSubtitle>
+      </div>
+      <div
+        style={{
+          background: "#fff",
+          margin: "40px auto 0 auto",
+          padding: "0 30px",
+          maxWidth: 920,
+        }}
+      >
+        <WorkIntroBlock>
+          <p>
+            <strong>{project.frontmatter.description}</strong>
+          </p>
+          <p>
+            <strong>Role:</strong> {project.frontmatter.role}
+          </p>
+          <p>
+            <strong>Deliverable:</strong> {project.frontmatter.deliverable}
+          </p>
+          <p>
+            <strong>Project Description:</strong>{" "}
+            {project.frontmatter.project_description}
+          </p>
+          {project.frontmatter.url && (
+            <a
+              className="btn block"
+              href={project.frontmatter.url}
+              title=""
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Site
+            </a>
+          )}
+          {project.frontmatter.github && (
+            <a
+              className="inline-link"
+              href={project.frontmatter.github}
+              title=""
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github
+            </a>
+          )}
+        </WorkIntroBlock>
+        <TextBody dangerouslySetInnerHTML={{ __html: project.html }} />
+      </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default WorkTemplate;
+export default WorkTemplate
 
 export const workpageQuery = graphql`
   query workPageByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path }}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         title
@@ -49,6 +82,7 @@ export const workpageQuery = graphql`
         github
         role
         deliverable
+        description
         project_description
         sub_title
       }

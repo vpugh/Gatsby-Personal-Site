@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-// import './tags.scss';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -11,18 +10,24 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
   return (
     <Layout padTop={true}>
-      <h1>{tagHeader}</h1>
-      <ul style={{ listStyle: 'none', margin: 0, padding: '0 0 30px 0'}}>
-        {edges.map(({ node }) => {
-          const { title, path: slug } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link className="inline-link" to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <Link className="btn block" to="/tags">All tags</Link>
+      <div style={{ background: "#fff", padding: "40px" }}>
+        <h1>{tagHeader}</h1>
+        <ul style={{ listStyle: "none", margin: 0, padding: "0 0 30px 0" }}>
+          {edges.map(({ node }) => {
+            const { title, path: slug } = node.frontmatter
+            return (
+              <li key={slug}>
+                <Link className="inline-link" to={slug}>
+                  {title}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+        <Link className="btn block" to="/tags">
+          All tags
+        </Link>
+      </div>
     </Layout>
   )
 }

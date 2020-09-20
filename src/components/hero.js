@@ -1,19 +1,35 @@
-import React from 'react';
-import { Link } from "gatsby";
-import { HeroContainer, HeroIntro, HeroTitle } from '../styles/hero-styled';
+import React, { useContext } from "react"
+import {
+  HeroContainer,
+  HeroWidthContainer,
+  HeroInnerContainer,
+  IntroTitle,
+  IntroSubtitle,
+  IntroTextContainer,
+} from "../styles/hero-styled"
+import ThemeContext from "../context/theme-context"
+import { selectedColor } from "../utils/color-helper"
 
 const Hero = () => {
+  const context = useContext(ThemeContext)
+
   return (
     <HeroContainer>
-      <HeroIntro>
-        UI/UX Developer & Problem-Solver
-        <span className="intro-line"/>
-      </HeroIntro>
-      <HeroTitle>
-        Creating <Link to="/solutions">solutions</Link>, <a rel="noopener noreferrer" href="https://codepen.io/Vpugh/" target="_blank">coding</a> stuff, and <a href="https://dribbble.com/teekatwo" target="_blank" rel="noopener noreferrer">designing</a> things.
-      </HeroTitle>
+      <HeroWidthContainer>
+        <HeroInnerContainer>
+          <IntroTextContainer>
+            <IntroTitle color={selectedColor(context.color, "darker")}>
+              UX Engineer &amp; Problem-Solver
+            </IntroTitle>
+            <IntroSubtitle>
+              What I do is simple to say but complex in execution. Create
+              solutions, code stuff, and design things.
+            </IntroSubtitle>
+          </IntroTextContainer>
+        </HeroInnerContainer>
+      </HeroWidthContainer>
     </HeroContainer>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
